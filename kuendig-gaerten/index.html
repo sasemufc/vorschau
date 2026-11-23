@@ -9,76 +9,101 @@
 <link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbfaf6;--ink:#1d1f1b;--mute:#5b6058;--line:#d8d9cf;--green:#2a5a34;--tint:#eef0e6;
-  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;--sans:'Source Sans 3','Helvetica Neue',Arial,sans-serif}
+:root{--paper:#f1efe5;--white:#fbfaf6;--ink:#161a15;--mute:#585f55;--line:#d6d6c8;--green:#2a5a34;--dark:#163020;--leaf:#3d8c4e;
+  --head:'Archivo','Helvetica Neue',Arial,sans-serif;--body:'Source Sans 3','Helvetica Neue',Arial,sans-serif}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:clip}
-body{font-family:var(--sans);font-size:1.075rem;line-height:1.65;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
-a{color:var(--green)}
-.wrap{width:min(1020px,100% - 40px);margin-inline:auto}
-.draft{background:#e9e6d8;color:#4a4a3c;font-size:.8rem;text-align:center;padding:.5rem 1rem;border-bottom:1px solid var(--line)}
+body{font-family:var(--body);font-size:1.08rem;line-height:1.65;background:var(--white);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
+.draft{background:var(--ink);color:#cfd3c9;font-size:.78rem;text-align:center;padding:.5rem 1rem}
 
-header{border-bottom:1px solid var(--line)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding:1rem 0}
-.top img{height:86px;width:auto;display:block}
-.top nav{display:flex;gap:1.8rem;align-items:center;flex-wrap:wrap;justify-content:flex-end}
-.top nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.98rem}
-.top nav a:hover{color:var(--green);text-decoration:underline;text-underline-offset:4px}
-.top nav .tel{color:var(--green);white-space:nowrap}
+header{background:var(--white);position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:84px}
+.top img{height:64px;width:auto;display:block}
+.top nav{display:flex;gap:2rem;align-items:center}
+.top nav a{text-decoration:none;font-family:var(--head);font-weight:600;font-size:.95rem}
+.top nav a:hover{color:var(--green)}
+.top nav .tel{background:var(--green);color:#fff;padding:.65rem 1.1rem}
+.top nav .tel:hover{background:var(--ink);color:#fff}
 
-.hero{padding:clamp(2.5rem,6vw,4.5rem) 0 clamp(2.5rem,5vw,4rem)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(1.5rem,5vw,4rem);align-items:center}
-h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.1rem,4.6vw,3.4rem);line-height:1.12;letter-spacing:-.01em}
-.hero p{margin:1.2rem 0 1.8rem;color:var(--mute);max-width:30rem;font-size:1.12rem}
-.btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;font-weight:600;padding:.85rem 1.5rem;border-radius:3px}
-.btn:hover{background:var(--ink)}
-.btn.line{background:none;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink);margin-left:.5rem}
-.btn.line:hover{background:var(--ink);color:#fff}
-.photo{aspect-ratio:4/3;background:var(--tint);border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--mute);font-size:.9rem;padding:1rem}
+/* Einstieg mit Zweig */
+.hero{background:var(--paper);position:relative;overflow:clip;min-height:clamp(480px,72vh,680px);display:flex;align-items:center}
+.hero .wrap{position:relative;z-index:2;padding:4rem 0}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.5rem,6.4vw,5.4rem);line-height:.98;letter-spacing:-.035em;max-width:11ch}
+.hero h1 span{color:var(--green)}
+.hero p{margin:1.5rem 0 2rem;max-width:28rem;color:var(--mute);font-size:1.15rem}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:.97rem;padding:.95rem 1.6rem;background:var(--green);color:#fff;text-decoration:none;border:2px solid var(--green)}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:.4rem}
+.btn.o:hover{background:var(--ink);color:#fff}
+.hero .zweig{height:auto;position:absolute;z-index:1;right:-4%;top:50%;width:min(46vw,540px);transform:translateY(-50%) rotate(8deg);transform-origin:30% 90%;animation:sway 9s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:translateY(-50%) rotate(8deg)}50%{transform:translateY(-50%) rotate(10.5deg)}}
 
-section{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--line)}
-h2{font-family:var(--serif);font-weight:600;font-size:clamp(1.55rem,3vw,2.1rem);line-height:1.2;margin-bottom:1.6rem}
-.cols{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,2fr);gap:clamp(1.2rem,4vw,3.5rem)}
+/* Nummer-Leiste */
+.callbar{background:var(--dark);color:#fff}
+.callbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap;padding:1.6rem 0}
+.callbar span{color:#aac2ae}
+.callbar a{font-family:var(--head);font-weight:800;font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.02em;text-decoration:none}
+.callbar a:hover{color:#9fd3a9}
 
-.svc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem 3rem}
-.svc h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;margin-bottom:.3rem}
-.svc p{color:var(--mute)}
+section{padding:clamp(3.5rem,8vw,6rem) 0}
+.k{font-family:var(--head);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:.8rem}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-.03em;max-width:17ch}
 
-.steps{list-style:none;counter-reset:s;display:grid;gap:1.3rem}
-.steps li{counter-increment:s;display:grid;grid-template-columns:2.2rem minmax(0,1fr)}
-.steps li:before{content:counter(s)".";font-family:var(--serif);font-weight:600;color:var(--green);font-size:1.25rem}
-.steps b{font-weight:600}
-.steps span{color:var(--mute);display:block}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,5rem);align-items:end}
+.intro p{color:var(--mute);font-size:1.15rem}
 
-dl{display:grid;grid-template-columns:9rem minmax(0,1fr);gap:.6rem 1rem}
-dt{color:var(--mute)}
-dd{font-weight:600}
+.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:3rem;border-top:2px solid var(--ink)}
+.svc div{padding:1.4rem 1.4rem 0 0}
+.svc div+div{padding-left:1.4rem;border-left:1px solid var(--line)}
+.svc b{font-family:var(--head);font-weight:800;font-size:1.3rem;letter-spacing:-.015em;display:block;margin-bottom:.5rem}
+.svc p{color:var(--mute);font-size:1rem}
 
-.contact{background:var(--green);color:#fff}
-.contact a{color:#fff}
-.contact h2{color:#fff}
-.contact .big{font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3.6vw,2.3rem);line-height:1.35;overflow-wrap:anywhere}
-.contact .big a{text-decoration:none;border-bottom:2px solid rgba(255,255,255,.4)}
-.contact .big a:hover{border-color:#fff}
-.contact p{margin-top:1.2rem;color:#d4e4d7}
-.contact .btn{background:#fff;color:var(--green);margin-top:1.4rem}
-.contact .btn:hover{background:var(--ink);color:#fff}
+.photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:3.5rem}
+.photos figure{margin:0}
+.ph{aspect-ratio:4/3;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:#8a9084;font-size:.85rem}
+.photos figcaption{font-size:.9rem;color:var(--mute);margin-top:.5rem}
 
-footer{padding:1.6rem 0 2rem;font-size:.86rem;color:var(--mute)}
+.alt{background:var(--paper)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2rem;margin-top:2.6rem;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--ink);padding-top:1rem}
+.steps li:before{content:"0" counter(s);font-family:var(--head);font-weight:800;color:var(--leaf);font-size:.95rem;display:block;margin-bottom:.5rem}
+.steps b{font-family:var(--head);font-weight:800;font-size:1.25rem;display:block;letter-spacing:-.01em}
+.steps span{color:var(--mute)}
+
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1.5rem,5vw,5rem)}
+.contact dl{display:grid;grid-template-columns:7rem minmax(0,1fr);gap:.7rem 1rem;align-self:end}
+.contact dt{color:var(--mute)}
+.contact dd{font-weight:600;overflow-wrap:anywhere}
+.contact dd a{text-decoration:none;border-bottom:1.5px solid var(--line)}
+.contact dd a:hover{border-color:var(--green);color:var(--green)}
+.contact .btns{margin-top:2rem}
+
+footer{background:var(--dark);color:#aac2ae;padding:1.6rem 0;font-size:.86rem}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
-@media (max-width:820px){
-  .hero .wrap,.cols{grid-template-columns:minmax(0,1fr)}
-  .svc{grid-template-columns:minmax(0,1fr)}
-  .top{flex-wrap:wrap}
-  .top img{height:70px}
-  .top nav{gap:1.1rem}
-  dl{grid-template-columns:minmax(0,1fr);gap:0}
-  dd{margin-bottom:.8rem}
-  .btn.line{margin:.6rem 0 0}
+@media (max-width:900px){
+  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .svc div:nth-child(3){padding-left:0;border-left:0}
+  .svc div:nth-child(n+3){margin-top:1.6rem;border-top:1px solid var(--line)}
+  .intro,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .steps{grid-template-columns:minmax(0,1fr)}
+  .photos{grid-template-columns:minmax(0,1fr)}
 }
+@media (max-width:760px){
+  .top{height:72px}.top img{height:52px}
+  .top nav a:not(.tel){display:none}
+  .hero{min-height:0}
+  .hero .zweig{width:48vw;right:-6%;top:auto;bottom:-3%;transform:rotate(8deg);animation:none}
+  .hero .wrap{padding:3rem 0 15.5rem}
+  .btn.o{margin:.6rem 0 0}
+  .contact dl{grid-template-columns:minmax(0,1fr);gap:0}
+  .contact dd{margin-bottom:.9rem}
+}
+@media (prefers-reduced-motion:reduce){.hero .zweig{animation:none}}
 </style>
 </head>
 <body>
@@ -87,11 +112,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <header>
   <div class="wrap top">
-    <a href="#top" aria-label="Kündig Gärten, Startseite"><img src="logo.png" alt="Kündig Gärten" width="141" height="86"></a>
+    <a href="#top" aria-label="Kündig Gärten, Startseite"><img src="logo.png" alt="Kündig Gärten" width="105" height="64"></a>
     <nav>
       <a href="#leistungen">Leistungen</a>
       <a href="#ablauf">Ablauf</a>
-      <a href="#ueber">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
       <a class="tel" href="tel:+41763930242">076 393 02 42</a>
     </nav>
   </div>
@@ -100,61 +125,64 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <main id="top">
 <div class="hero">
   <div class="wrap">
-    <div>
-      <h1>Gartenpflege und Gartenbau in Wetzikon</h1>
-      <p>Jens Kündig pflegt und baut Gärten, liefert das Material dazu und handelt mit Pflanzen. Sie sprechen direkt mit ihm, vom ersten Anruf bis zum fertigen Garten.</p>
-      <a class="btn" href="#kontakt">Kontakt aufnehmen</a><a class="btn line" href="tel:+41763930242">Anrufen</a>
-    </div>
-    <div class="photo" role="img" aria-label="Platzhalter für ein Foto">Platz für ein Foto<br>eines Gartens von Kündig Gärten</div>
+    <h1>Gärten in <span>Wetzikon</span> pflegen und bauen.</h1>
+    <p>Jens Kündig kümmert sich um Gartenpflege, Gartenbau, Material und Pflanzen. Direkt, ohne Umwege.</p>
+    <a class="btn" href="#kontakt">Kontakt aufnehmen</a><a class="btn o" href="tel:+41763930242">Anrufen</a>
   </div>
+  <img class="zweig" src="zweig.png" alt="" width="559" height="593">
+</div>
+
+<div class="callbar">
+  <div class="wrap"><span>Rufen Sie uns an</span><a href="tel:+41763930242">076 393 02 42</a></div>
 </div>
 
 <section id="leistungen">
-  <div class="wrap cols">
-    <h2>Leistungen</h2>
+  <div class="wrap">
+    <div class="intro">
+      <div><div class="k">Leistungen</div><h2>Vier Dinge, ein Ansprechpartner.</h2></div>
+      <p>Kündig Gärten ist eine Einzelfirma in Wetzikon, seit 2022 im Handelsregister. Was Ihr Garten braucht, klären wir bei einem Besuch vor Ort.</p>
+    </div>
     <div class="svc">
-      <div><h3>Gartenpflege</h3><p>Regelmässiger Unterhalt von Rasen, Hecken und Beeten, damit der Garten das ganze Jahr gepflegt aussieht.</p></div>
-      <div><h3>Gartenbau</h3><p>Neu anlegen oder umgestalten: Beete, Rasenflächen, Wege und Sitzplätze.</p></div>
-      <div><h3>Material liefern</h3><p>Erde, Mulch, Kies und weiteres Material, auf Wunsch gleich mitgeliefert.</p></div>
-      <div><h3>Pflanzenhandel</h3><p>Pflanzen für Beet und Topf, passend zu Standort und Boden.</p></div>
+      <div><b>Gartenpflege</b><p>Regelmässiger Unterhalt von Rasen, Hecken und Beeten.</p></div>
+      <div><b>Gartenbau</b><p>Neu anlegen oder umgestalten: Beete, Rasen, Wege, Sitzplätze.</p></div>
+      <div><b>Material liefern</b><p>Erde, Mulch, Kies und mehr, auf Wunsch gleich mitgeliefert.</p></div>
+      <div><b>Pflanzenhandel</b><p>Pflanzen für Beet und Topf, passend zu Standort und Boden.</p></div>
+    </div>
+    <div class="photos">
+      <figure><div class="ph">Foto folgt</div><figcaption>Gartenpflege</figcaption></figure>
+      <figure><div class="ph">Foto folgt</div><figcaption>Gartenbau</figcaption></figure>
+      <figure><div class="ph">Foto folgt</div><figcaption>Pflanzen</figcaption></figure>
     </div>
   </div>
 </section>
 
-<section id="ablauf">
-  <div class="wrap cols">
-    <h2>Ablauf</h2>
+<section class="alt" id="ablauf">
+  <div class="wrap">
+    <div class="k">Ablauf</div>
+    <h2>So läuft es ab.</h2>
     <ol class="steps">
-      <li><div><b>Sie melden sich</b><span>Per Anruf, Mail oder WhatsApp. Ein paar Stichworte genügen.</span></div></li>
-      <li><div><b>Besichtigung vor Ort</b><span>Wir schauen den Garten gemeinsam an und besprechen Ihre Wünsche.</span></div></li>
-      <li><div><b>Offerte und Umsetzung</b><span>Sie erhalten eine Offerte. Danach wird gebaut oder regelmässig gepflegt.</span></div></li>
+      <li><b>Sie melden sich</b><span>Per Anruf, Mail oder WhatsApp. Ein paar Stichworte genügen.</span></li>
+      <li><b>Besichtigung vor Ort</b><span>Wir schauen den Garten gemeinsam an und besprechen Ihre Wünsche.</span></li>
+      <li><b>Offerte und Umsetzung</b><span>Sie erhalten eine Offerte. Danach wird gebaut oder regelmässig gepflegt.</span></li>
     </ol>
-  </div>
-</section>
-
-<section id="ueber">
-  <div class="wrap cols">
-    <h2>Über uns</h2>
-    <div>
-      <p style="margin-bottom:1.6rem;max-width:36rem">Kündig Gärten ist eine Einzelfirma in Wetzikon. Der Betrieb besteht seit 2022, Inhaber ist Jens Kündig.</p>
-      <dl>
-        <dt>Inhaber</dt><dd>Jens Kündig</dd>
-        <dt>Standort</dt><dd>Grütstrasse 51, 8620 Wetzikon ZH</dd>
-        <dt>Tätigkeit</dt><dd>Gartenpflege, Gartenbau, Material, Pflanzenhandel</dd>
-      </dl>
-    </div>
   </div>
 </section>
 
 <section class="contact" id="kontakt">
   <div class="wrap">
-    <h2>Ich freue mich auf Ihre Kontaktaufnahme.</h2>
-    <div class="big">
-      <a href="tel:+41763930242">076 393 02 42</a><br>
-      <a href="mailto:info@kuendig-gaerten.ch">info@kuendig-gaerten.ch</a>
+    <div>
+      <div class="k">Kontakt</div>
+      <h2>Ich freue mich auf Ihre Kontaktaufnahme.</h2>
+      <div class="btns">
+        <a class="btn" href="https://wa.me/41763930242?text=Guten%20Tag%20Herr%20K%C3%BCndig%2C%20ich%20habe%20eine%20Anfrage%20zu%20meinem%20Garten.%20K%C3%B6nnten%20Sie%20sich%20bei%20mir%20melden%3F">Per WhatsApp schreiben</a>
+      </div>
     </div>
-    <p>Jens Kündig · Grütstrasse 51 · 8620 Wetzikon</p>
-    <a class="btn" href="https://wa.me/41763930242?text=Guten%20Tag%20Herr%20K%C3%BCndig%2C%20ich%20habe%20eine%20Anfrage%20zu%20meinem%20Garten.%20K%C3%B6nnten%20Sie%20sich%20bei%20mir%20melden%3F">Per WhatsApp schreiben</a>
+    <dl>
+      <dt>Inhaber</dt><dd>Jens Kündig</dd>
+      <dt>Adresse</dt><dd>Grütstrasse 51, 8620 Wetzikon ZH</dd>
+      <dt>Telefon</dt><dd><a href="tel:+41763930242">076 393 02 42</a></dd>
+      <dt>E-Mail</dt><dd><a href="mailto:info@kuendig-gaerten.ch">info@kuendig-gaerten.ch</a></dd>
+    </dl>
   </div>
 </section>
 </main>
