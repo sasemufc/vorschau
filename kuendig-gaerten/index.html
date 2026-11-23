@@ -64,7 +64,7 @@ h2{font-family:var(--head);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line
 
 .photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:3.5rem}
 .photos figure{margin:0}
-.ph{aspect-ratio:4/3;background:var(--paper);border:1px solid var(--line);display:grid;place-items:center;color:#8a9084;font-size:.85rem}
+.ph{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;background:var(--paper)}
 .photos figcaption{font-size:.9rem;color:var(--mute);margin-top:.5rem}
 
 .alt{background:var(--paper)}
@@ -108,7 +108,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </head>
 <body>
 
-<div class="draft">Entwurf von Samyan Seyfi, nicht die offizielle Website von Kündig Gärten. Texte sind Platzhalter, Fotos folgen.</div>
+<div class="draft">Entwurf von Samyan Seyfi, nicht die offizielle Website von Kündig Gärten. Texte sind Platzhalter, Fotos sind Beispielbilder.</div>
 
 <header>
   <div class="wrap top">
@@ -149,9 +149,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <div><b>Pflanzenhandel</b><p>Pflanzen für Beet und Topf, passend zu Standort und Boden.</p></div>
     </div>
     <div class="photos">
-      <figure><div class="ph">Foto folgt</div><figcaption>Gartenpflege</figcaption></figure>
-      <figure><div class="ph">Foto folgt</div><figcaption>Gartenbau</figcaption></figure>
-      <figure><div class="ph">Foto folgt</div><figcaption>Pflanzen</figcaption></figure>
+      <figure><img class="ph" src="https://images.pexels.com/photos/11364122/pexels-photo-11364122.jpeg?auto=compress&cs=tinysrgb&w=900&h=675&fit=crop" alt="Rasen wird gemäht" loading="lazy" width="900" height="675"><figcaption>Gartenpflege</figcaption></figure>
+      <figure><img class="ph" src="https://images.pexels.com/photos/7546775/pexels-photo-7546775.jpeg?auto=compress&cs=tinysrgb&w=900&h=675&fit=crop" alt="Gepflegter Rasen mit Gartenwegen vor einem Haus" loading="lazy" width="900" height="675"><figcaption>Gartenbau</figcaption></figure>
+      <figure><img class="ph" src="https://images.pexels.com/photos/30371404/pexels-photo-30371404.jpeg?auto=compress&cs=tinysrgb&w=900&h=675&fit=crop" alt="Setzlinge werden in die Erde gepflanzt" loading="lazy" width="900" height="675"><figcaption>Pflanzen</figcaption></figure>
     </div>
   </div>
 </section>
@@ -188,7 +188,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </main>
 
 <footer>
-  <div class="wrap"><span>© Kündig Gärten, Jens Kündig</span><span>Entwurf, nicht öffentlich</span></div>
+  <div class="wrap"><span>© Kündig Gärten, Jens Kündig</span><span>Entwurf · Beispielfotos: Pexels (Pascal Küffer, Max Vakhtbovych, Natalia Sevruk)</span></div>
 </footer>
 
 </body>
