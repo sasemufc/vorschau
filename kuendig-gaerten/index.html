@@ -40,7 +40,7 @@ header{background:var(--white);position:sticky;top:0;z-index:30;border-bottom:1p
 .btn.o{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:.4rem}
 .btn.o:hover{background:var(--ink);color:#fff}
 .tile{border:2px solid var(--green);background:#e2e7d6;aspect-ratio:5/4;max-height:330px;width:100%;position:relative;overflow:hidden}
-.tile img{position:absolute;right:-6%;bottom:-8%;width:78%;height:auto;transform:rotate(10deg);transform-origin:50% 100%}
+.tile img{position:absolute;left:50%;transform:translateX(-50%);top:6%;height:104%;width:auto}
 .tile span{position:absolute;left:1rem;bottom:.9rem;font-family:var(--head);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
 
 section{padding:clamp(2.5rem,6vw,4.5rem) 0}
@@ -90,7 +90,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 @media (max-width:760px){
   .top{height:64px}.top img{height:46px}
   .top nav a:not(.tel){display:none}
-  .tile{max-height:240px;aspect-ratio:16/10}
+  .tile{max-height:260px;aspect-ratio:16/10}
   .btn.o{margin:.6rem 0 0}
   .contact dl{grid-template-columns:minmax(0,1fr);gap:0}
   .contact dd{margin-bottom:.9rem}
@@ -121,7 +121,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
       <p>Jens Kündig kümmert sich um Gartenpflege, Gartenbau, Material und Pflanzen. Direkt, ohne Umwege.</p>
       <a class="btn" href="#kontakt">Kontakt aufnehmen</a><a class="btn o" href="tel:+41763930242">076 393 02 42</a>
     </div>
-    <div class="tile" aria-hidden="true"><img src="zweig.png" alt="" width="559" height="593"><span>Seit 2022</span></div>
+    <div class="tile" aria-hidden="true"><img src="zweig.svg" alt="" width="420" height="510"><span>Seit 2022</span></div>
   </div>
 </div>
 
