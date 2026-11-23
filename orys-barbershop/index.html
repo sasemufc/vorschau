@@ -109,6 +109,13 @@
   .grid .a{grid-row:span 2}
   .grid figcaption{position:absolute;left:12px;bottom:10px;font-size:11px;letter-spacing:.14em;background:var(--bk);padding:5px 8px;color:var(--mute)}
 
+
+  .igstrip{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:#444 transparent}
+  .igstrip .ig{flex:0 0 min(360px,84vw);scroll-snap-align:start;filter:grayscale(1) contrast(1.05);transition:filter .5s;background:#141414;min-height:420px}
+  .igstrip .ig:hover{filter:none}
+  .igstrip .ig>blockquote{background:#fff;border:0;border-radius:0}
+  .igstrip .ig a{display:block;padding:40px 20px;color:#111;font-weight:700;text-align:center}
+  .ighint{margin-top:16px;color:var(--mute);font-size:13px;letter-spacing:.08em}
   /* SOCIAL */
   .social{padding-bottom:clamp(100px,12vw,170px)}
   .soc{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line)}
@@ -166,7 +173,7 @@
 </style>
 </head>
 <body>
-<div class="note">Entwurf von Samyan Seyfi · nicht die offizielle Website von Ory's Barbershop · Bilder: Unsplash (Platzhalter)</div>
+<div class="note">Entwurf von Samyan Seyfi · nicht die offizielle Website von Ory's Barbershop · Bilder: Instagram-Einbettung &amp; Unsplash</div>
 
 <header class="pad" id="h">
   <a class="logo" href="#"><img src="logo.png" alt="Ory's Barbershop Logo"><span>ORY'S<br><small style="font-size:10px;letter-spacing:.32em;opacity:.7">BARBERSHOP</small></span></a>
@@ -224,13 +231,15 @@
     <h2 class="dis up">Im <span class="red">Stuhl</span></h2>
     <a class="up" href="https://www.instagram.com/orysbarbershop/" target="_blank" rel="noopener">MEHR AUF INSTAGRAM →</a>
   </div>
-  <div class="grid up">
-    <figure class="a"><img src="https://unsplash.com/photos/ydd_DCROCTA/download?w=1200" alt="" loading="lazy"><figcaption>PLATZHALTER</figcaption></figure>
-    <figure><img src="https://unsplash.com/photos/I2qtMgu8IJA/download?w=800" alt="" loading="lazy"><figcaption>PLATZHALTER</figcaption></figure>
-    <figure><img src="https://unsplash.com/photos/zRshOvj0K4o/download?w=800" alt="" loading="lazy"><figcaption>PLATZHALTER</figcaption></figure>
-    <figure><img src="https://unsplash.com/photos/Yb6tFZfh28Y/download?w=800" alt="" loading="lazy"><figcaption>PLATZHALTER</figcaption></figure>
-    <figure><img src="https://unsplash.com/photos/PDDvMlScofU/download?w=800" alt="" loading="lazy"><figcaption>PLATZHALTER</figcaption></figure>
+  <div class="igstrip up">
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Cx--RqEKthX/" data-instgrm-version="14" style="margin:0;max-width:100%;min-width:300px;width:100%"><a href="https://www.instagram.com/p/Cx--RqEKthX/" target="_blank" rel="noopener">Post auf Instagram ansehen</a></blockquote></div>
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ctoqg6GKKQS/" data-instgrm-version="14" style="margin:0;max-width:100%;min-width:300px;width:100%"><a href="https://www.instagram.com/p/Ctoqg6GKKQS/" target="_blank" rel="noopener">Post auf Instagram ansehen</a></blockquote></div>
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DcWvnrHuBa8/" data-instgrm-version="14" style="margin:0;max-width:100%;min-width:300px;width:100%"><a href="https://www.instagram.com/p/DcWvnrHuBa8/" target="_blank" rel="noopener">Post auf Instagram ansehen</a></blockquote></div>
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/CYexP6-KBTz/" data-instgrm-version="14" style="margin:0;max-width:100%;min-width:300px;width:100%"><a href="https://www.instagram.com/p/CYexP6-KBTz/" target="_blank" rel="noopener">Post auf Instagram ansehen</a></blockquote></div>
+    <div class="ig"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Bx92oR0InUh/" data-instgrm-version="14" style="margin:0;max-width:100%;min-width:300px;width:100%"><a href="https://www.instagram.com/p/Bx92oR0InUh/" target="_blank" rel="noopener">Post auf Instagram ansehen</a></blockquote></div>
   </div>
+  <p class="ighint up">← wischen · Posts direkt von Instagram @orysbarbershop</p>
+</div>
 </section>
 
 <section class="social pad">
@@ -279,5 +288,6 @@
   const r=document.querySelector('#hours li[data-d="'+d+'"]');if(r)r.classList.add('today');
   document.querySelectorAll('img').forEach(i=>i.addEventListener('error',()=>i.style.opacity=0));
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
