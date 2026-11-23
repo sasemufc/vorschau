@@ -21,35 +21,29 @@ a{color:inherit}
 .draft{background:var(--ink);color:#cfd3c9;font-size:.78rem;text-align:center;padding:.5rem 1rem}
 
 header{background:var(--white);position:sticky;top:0;z-index:30;border-bottom:1px solid var(--line)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:84px}
-.top img{height:64px;width:auto;display:block}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;height:72px}
+.top img{height:54px;width:auto;display:block}
 .top nav{display:flex;gap:2rem;align-items:center}
 .top nav a{text-decoration:none;font-family:var(--head);font-weight:600;font-size:.95rem}
 .top nav a:hover{color:var(--green)}
 .top nav .tel{background:var(--green);color:#fff;padding:.65rem 1.1rem}
 .top nav .tel:hover{background:var(--ink);color:#fff}
 
-/* Einstieg mit Zweig */
-.hero{background:var(--paper);position:relative;overflow:clip;min-height:clamp(480px,72vh,680px);display:flex;align-items:center}
-.hero .wrap{position:relative;z-index:2;padding:4rem 0}
-.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.5rem,6.4vw,5.4rem);line-height:.98;letter-spacing:-.035em;max-width:11ch}
+/* Einstieg */
+.hero{background:var(--paper);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:clamp(1.5rem,4vw,3.5rem);align-items:center;padding:clamp(2rem,4vw,3.2rem) 0}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(2.2rem,4.6vw,3.8rem);line-height:1;letter-spacing:-.035em;max-width:14ch}
 .hero h1 span{color:var(--green)}
-.hero p{margin:1.5rem 0 2rem;max-width:28rem;color:var(--mute);font-size:1.15rem}
-.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:.97rem;padding:.95rem 1.6rem;background:var(--green);color:#fff;text-decoration:none;border:2px solid var(--green)}
+.hero p{margin:1.1rem 0 1.5rem;max-width:30rem;color:var(--mute);font-size:1.1rem}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:.95rem;padding:.85rem 1.4rem;background:var(--green);color:#fff;text-decoration:none;border:2px solid var(--green)}
 .btn:hover{background:var(--ink);border-color:var(--ink)}
 .btn.o{background:transparent;color:var(--ink);border-color:var(--ink);margin-left:.4rem}
 .btn.o:hover{background:var(--ink);color:#fff}
-.hero .zweig{height:auto;position:absolute;z-index:1;right:-4%;top:50%;width:min(46vw,540px);transform:translateY(-50%) rotate(8deg);transform-origin:30% 90%;animation:sway 9s ease-in-out infinite}
-@keyframes sway{0%,100%{transform:translateY(-50%) rotate(8deg)}50%{transform:translateY(-50%) rotate(10.5deg)}}
+.tile{background:#e2e7d6;aspect-ratio:5/4;max-height:330px;width:100%;position:relative;overflow:hidden}
+.tile img{position:absolute;right:-6%;bottom:-8%;width:78%;height:auto;transform:rotate(10deg);transform-origin:50% 100%}
+.tile span{position:absolute;left:1rem;bottom:.9rem;font-family:var(--head);font-weight:600;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
 
-/* Nummer-Leiste */
-.callbar{background:var(--dark);color:#fff}
-.callbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem 2rem;flex-wrap:wrap;padding:1.6rem 0}
-.callbar span{color:#aac2ae}
-.callbar a{font-family:var(--head);font-weight:800;font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:-.02em;text-decoration:none}
-.callbar a:hover{color:#9fd3a9}
-
-section{padding:clamp(3.5rem,8vw,6rem) 0}
+section{padding:clamp(2.5rem,6vw,4.5rem) 0}
 .k{font-family:var(--head);font-weight:600;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf);margin-bottom:.8rem}
 h2{font-family:var(--head);font-weight:800;font-size:clamp(1.9rem,4vw,3rem);line-height:1.04;letter-spacing:-.03em;max-width:17ch}
 
@@ -89,21 +83,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
   .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
   .svc div:nth-child(3){padding-left:0;border-left:0}
   .svc div:nth-child(n+3){margin-top:1.6rem;border-top:1px solid var(--line)}
-  .intro,.contact .wrap{grid-template-columns:minmax(0,1fr)}
+  .hero .wrap,.intro,.contact .wrap{grid-template-columns:minmax(0,1fr)}
   .steps{grid-template-columns:minmax(0,1fr)}
   .photos{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:760px){
-  .top{height:72px}.top img{height:52px}
+  .top{height:64px}.top img{height:46px}
   .top nav a:not(.tel){display:none}
-  .hero{min-height:0}
-  .hero .zweig{width:48vw;right:-6%;top:auto;bottom:-3%;transform:rotate(8deg);animation:none}
-  .hero .wrap{padding:3rem 0 15.5rem}
+  .tile{max-height:240px;aspect-ratio:16/10}
   .btn.o{margin:.6rem 0 0}
   .contact dl{grid-template-columns:minmax(0,1fr);gap:0}
   .contact dd{margin-bottom:.9rem}
 }
-@media (prefers-reduced-motion:reduce){.hero .zweig{animation:none}}
 </style>
 </head>
 <body>
@@ -125,15 +116,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 <main id="top">
 <div class="hero">
   <div class="wrap">
-    <h1>Gärten in <span>Wetzikon</span> pflegen und bauen.</h1>
-    <p>Jens Kündig kümmert sich um Gartenpflege, Gartenbau, Material und Pflanzen. Direkt, ohne Umwege.</p>
-    <a class="btn" href="#kontakt">Kontakt aufnehmen</a><a class="btn o" href="tel:+41763930242">Anrufen</a>
+    <div>
+      <h1>Gärten in <span>Wetzikon</span> pflegen und bauen.</h1>
+      <p>Jens Kündig kümmert sich um Gartenpflege, Gartenbau, Material und Pflanzen. Direkt, ohne Umwege.</p>
+      <a class="btn" href="#kontakt">Kontakt aufnehmen</a><a class="btn o" href="tel:+41763930242">076 393 02 42</a>
+    </div>
+    <div class="tile" aria-hidden="true"><img src="zweig.png" alt="" width="559" height="593"><span>Seit 2022</span></div>
   </div>
-  <img class="zweig" src="zweig.png" alt="" width="559" height="593">
-</div>
-
-<div class="callbar">
-  <div class="wrap"><span>Rufen Sie uns an</span><a href="tel:+41763930242">076 393 02 42</a></div>
 </div>
 
 <section id="leistungen">
