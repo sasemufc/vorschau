@@ -5,136 +5,176 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Handy Reparatur Schwerzenbach · Ischtar GmbH</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#111111">
+<meta name="theme-color" content="#0c0c0c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-  :root{--bk:#111;--bk2:#1b1b1b;--or:#ff8a1f;--or2:#ffb347;--cream:#fff7ee;--wh:#fff;--mute:#8b8478;--line:rgba(17,17,17,.12);
-        --dis:"Sora",system-ui,sans-serif;--sans:"Inter",system-ui,sans-serif}
+  :root{--bk:#0c0c0c;--bk2:#151515;--bk3:#1e1e1e;--or:#ff8a1f;--or2:#ffb347;--cream:#fff7ee;--mute:#8a847a;--lineD:rgba(255,255,255,.09);--lineL:rgba(12,12,12,.1);
+        --sans:"Geist",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;overflow-x:clip}
-  body{font-family:var(--sans);background:var(--cream);color:var(--bk);-webkit-font-smoothing:antialiased}
+  body{font-family:var(--sans);background:var(--bk);color:#fff;-webkit-font-smoothing:antialiased}
   a{color:inherit;text-decoration:none}
   .pad{padding-left:clamp(18px,4.5vw,64px);padding-right:clamp(18px,4.5vw,64px)}
-  h1,h2,h3{font-family:var(--dis);letter-spacing:-.03em;line-height:1}
-  .or{color:var(--or)}
+  .mono{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+  .grad{background:linear-gradient(100deg,var(--or2),var(--or) 45%,#ff5f1f);-webkit-background-clip:text;background-clip:text;color:transparent}
+  h1,h2,h3{letter-spacing:-.045em;line-height:.95;font-weight:700}
 
-  .note{background:var(--bk);color:#bbb;font-size:11.5px;text-align:center;padding:6px 12px}
+  .note{background:#000;color:#8a847a;font-size:11.5px;text-align:center;padding:6px 12px;border-bottom:1px solid var(--lineD)}
 
-  header{position:sticky;top:0;z-index:40;display:flex;justify-content:space-between;align-items:center;height:72px;background:rgba(255,247,238,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-  .logo{display:flex;align-items:center;gap:10px;font-family:var(--dis);font-weight:800;font-size:17px;letter-spacing:-.02em;line-height:1.05}
-  .logo small{display:block;font-family:var(--sans);font-weight:500;font-size:11px;letter-spacing:.12em;color:var(--mute);text-transform:uppercase}
-  .logo .ic{width:38px;height:38px;border-radius:11px;background:var(--or);display:grid;place-items:center}
-  .logo .ic svg{width:20px;height:20px;stroke:var(--bk);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
-  nav{display:flex;gap:28px;font-size:14.5px;font-weight:500}
-  nav a{color:#5a554d;transition:color .2s}nav a:hover{color:var(--bk)}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;font-weight:600;font-size:15px;transition:transform .2s,background .2s,box-shadow .2s}
-  .btn.or{background:var(--or);color:var(--bk);box-shadow:0 10px 24px -12px rgba(255,138,31,.9)}
-  .btn.or:hover{transform:translateY(-2px);background:var(--or2)}
-  .btn.dk{background:var(--bk);color:#fff}
-  .btn.dk:hover{transform:translateY(-2px)}
-  .btn.ln{border:1.5px solid var(--bk)}
-  .btn.ln:hover{background:var(--bk);color:#fff}
-  .wa{width:18px;height:18px;fill:currentColor}
+  /* NAV */
+  header{position:sticky;top:12px;z-index:50;margin:12px auto 0;width:min(1100px,calc(100% - 24px));display:flex;justify-content:space-between;align-items:center;height:62px;padding:0 10px 0 18px;border-radius:18px;background:rgba(20,20,20,.72);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid var(--lineD)}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15.5px;letter-spacing:-.02em;line-height:1.1}
+  .logo small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--mute);font-weight:400}
+  .logo .ic{width:34px;height:34px;border-radius:10px;background:var(--or);display:grid;place-items:center;box-shadow:0 0 20px rgba(255,138,31,.5)}
+  .logo .ic svg{width:18px;height:18px;stroke:#0c0c0c;fill:none;stroke-width:2.4;stroke-linecap:round}
+  nav{display:flex;gap:4px}
+  nav a{padding:9px 14px;border-radius:10px;font-size:14px;color:#bdb7ad;transition:background .2s,color .2s}
+  nav a:hover{background:rgba(255,255,255,.06);color:#fff}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 20px;border-radius:12px;font-weight:600;font-size:14.5px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+  .btn.or{background:var(--or);color:#0c0c0c;box-shadow:0 0 0 1px rgba(255,255,255,.15) inset,0 10px 30px -10px rgba(255,138,31,.8)}
+  .btn.or:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,255,255,.25) inset,0 16px 40px -12px rgba(255,138,31,.95)}
+  .btn.gh{background:rgba(255,255,255,.06);border:1px solid var(--lineD)}
+  .btn.gh:hover{background:rgba(255,255,255,.1)}
+  .wa{width:17px;height:17px;fill:currentColor}
 
   /* HERO */
-  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:clamp(40px,6vw,80px);padding-bottom:clamp(60px,8vw,110px)}
-  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:8px 14px;font-size:13.5px;font-weight:500;margin-bottom:26px}
-  .pill i{width:8px;height:8px;border-radius:50%;background:#aaa}
-  .pill i.on{background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.2)}
-  .hero h1{font-weight:800;font-size:clamp(50px,8vw,118px)}
-  .hero h1 .u{position:relative;white-space:nowrap}
-  .hero h1 .u::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--or);z-index:-1;border-radius:4px;transform-origin:left;animation:grow 1s .6s cubic-bezier(.2,.7,.2,1) both}
-  @keyframes grow{from{transform:scaleX(0)}}
-  .hero p{font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#4d483f;max-width:500px;margin:26px 0 32px}
+  .hero{position:relative;padding-top:clamp(70px,9vw,120px);padding-bottom:clamp(70px,9vw,120px);display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:-20% -10% auto;height:120%;background:radial-gradient(600px 380px at 75% 40%,rgba(255,138,31,.28),transparent 70%),radial-gradient(500px 300px at 10% 90%,rgba(255,95,31,.12),transparent 70%);pointer-events:none}
+  .hero::after{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--lineD) 1px,transparent 1px),linear-gradient(90deg,var(--lineD) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 70%);-webkit-mask-image:radial-gradient(ellipse at 60% 40%,#000 20%,transparent 70%);pointer-events:none;opacity:.6}
+  .hero>*{position:relative;z-index:1}
+  .badge{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--lineD);background:rgba(255,255,255,.04);border-radius:40px;padding:7px 14px 7px 8px;font-size:13px;color:#cfc9bf;margin-bottom:28px}
+  .badge i{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.08)}
+  .badge i::after{content:"";width:8px;height:8px;border-radius:50%;background:#888}
+  .badge i.on::after{background:#22c55e;box-shadow:0 0 10px #22c55e}
+  .hero h1{font-size:clamp(54px,8.6vw,128px)}
+  .hero p{font-size:clamp(17px,1.5vw,19px);line-height:1.6;color:#b8b2a8;max-width:480px;margin:28px 0 34px}
   .hero .btns{display:flex;gap:10px;flex-wrap:wrap}
-  .trust{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;font-size:14px;color:#5a554d}
-  .trust b{display:block;font-family:var(--dis);font-size:22px;color:var(--bk)}
+  .ticks{display:flex;gap:22px;flex-wrap:wrap;margin-top:34px;color:#9e988e;font-size:13.5px}
+  .ticks span{display:flex;align-items:center;gap:8px}
+  .ticks svg{width:16px;height:16px;stroke:var(--or);stroke-width:2.6;fill:none;stroke-linecap:round;stroke-linejoin:round}
 
-  /* Handy-Illustration: Riss wird repariert */
-  .phone{position:relative;justify-self:center;width:min(300px,70vw);aspect-ratio:9/18.5;background:var(--bk);border-radius:42px;padding:12px;box-shadow:0 50px 80px -40px rgba(0,0,0,.55),inset 0 0 0 2px #333;transform:rotate(6deg)}
-  .screen{position:relative;width:100%;height:100%;border-radius:32px;overflow:hidden;background:linear-gradient(160deg,var(--or2),var(--or) 55%,#e66a00)}
-  .screen .notch{position:absolute;top:10px;left:50%;transform:translateX(-50%);width:34%;height:22px;background:var(--bk);border-radius:20px;z-index:3}
-  .screen .ok{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:var(--bk);font-family:var(--dis);font-weight:800;font-size:22px;opacity:0;animation:okIn 6s infinite}
-  .screen .ok svg{width:64px;height:64px;stroke:var(--bk);stroke-width:3;fill:none;margin:0 auto 10px;display:block}
-  .crack{position:absolute;inset:0;width:100%;height:100%;animation:crack 6s infinite}
-  .crack path{stroke:#fff;stroke-width:2;fill:none;stroke-linecap:round;opacity:.95}
-  .tool{position:absolute;right:-34px;bottom:70px;width:78px;height:78px;border-radius:22px;background:#fff;display:grid;place-items:center;box-shadow:0 20px 40px -18px rgba(0,0,0,.4);transform:rotate(-6deg);animation:bob 3s ease-in-out infinite}
-  .tool svg{width:38px;height:38px;stroke:var(--bk);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-  @keyframes crack{0%,10%{opacity:0}14%,45%{opacity:1}55%,100%{opacity:0}}
-  @keyframes okIn{0%,55%{opacity:0;transform:scale(.9)}62%,92%{opacity:1;transform:none}100%{opacity:0}}
-  @keyframes bob{50%{transform:rotate(-6deg) translateY(-10px)}}
+  /* 3D-Handy */
+  .stage{perspective:1200px;justify-self:center;position:relative;width:min(300px,64vw)}
+  .phone{position:relative;aspect-ratio:9/19;background:linear-gradient(145deg,#2a2a2a,#0e0e0e);border-radius:46px;padding:11px;box-shadow:0 60px 100px -40px rgba(255,138,31,.45),0 0 0 1px rgba(255,255,255,.1) inset;transform-style:preserve-3d;transition:transform .2s ease-out;transform:rotateY(-16deg) rotateX(6deg)}
+  .screen{position:relative;width:100%;height:100%;border-radius:36px;overflow:hidden;background:#111}
+  .screen .wall{position:absolute;inset:0;background:radial-gradient(120% 70% at 30% 10%,var(--or2),var(--or) 45%,#d24d00 90%)}
+  .screen .isl{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:32%;height:24px;background:#000;border-radius:20px;z-index:3}
+  .crack{position:absolute;inset:0;width:100%;height:100%;animation:crack 7s infinite}
+  .crack path{stroke:#fff;stroke-width:1.6;fill:none;stroke-linecap:round}
+  .shade{position:absolute;inset:0;background:rgba(0,0,0,.35);animation:crack 7s infinite}
+  .scan{position:absolute;left:0;right:0;height:30%;background:linear-gradient(180deg,transparent,rgba(255,255,255,.55),transparent);top:-30%;animation:scan 7s infinite}
+  .done{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#0c0c0c;font-weight:700;font-size:20px;letter-spacing:-.02em;opacity:0;animation:done 7s infinite}
+  .done svg{width:58px;height:58px;stroke:#0c0c0c;stroke-width:2.6;fill:none;display:block;margin:0 auto 8px}
+  @keyframes crack{0%,8%{opacity:0}12%,44%{opacity:1}54%,100%{opacity:0}}
+  @keyframes scan{0%,44%{top:-30%}56%{top:100%}100%{top:100%}}
+  @keyframes done{0%,56%{opacity:0;transform:scale(.92)}62%,94%{opacity:1;transform:none}100%{opacity:0}}
+  .chip{position:absolute;display:flex;align-items:center;gap:10px;padding:11px 14px;border-radius:14px;background:rgba(28,28,28,.78);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border:1px solid var(--lineD);font-size:13px;box-shadow:0 20px 40px -20px rgba(0,0,0,.8);animation:float 5s ease-in-out infinite}
+  .chip b{display:block;font-size:14px}
+  .chip small{color:var(--mute);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em}
+  .chip .d{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(255,138,31,.15)}
+  .chip .d svg{width:16px;height:16px;stroke:var(--or);stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .chip.c1{left:-70px;top:18%}
+  .chip.c2{right:-64px;top:52%;animation-delay:-2s}
+  .chip.c3{left:-40px;bottom:8%;animation-delay:-3.5s}
+  @keyframes float{50%{transform:translateY(-10px)}}
 
-  /* PROBLEM-WAHL */
-  .fix{background:var(--bk);color:#fff;padding-top:clamp(90px,11vw,150px);padding-bottom:clamp(90px,11vw,150px);border-radius:36px 36px 0 0}
-  .fix h2{font-weight:800;font-size:clamp(40px,6vw,88px);margin-bottom:14px}
-  .fix .lead{color:#a8a196;font-size:17px;max-width:520px;margin-bottom:44px}
-  .probs{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-  .pb{background:var(--bk2);border:1.5px solid #2a2a2a;border-radius:20px;padding:22px 16px;cursor:pointer;text-align:left;color:#fff;font:inherit;transition:border-color .25s,transform .25s,background .25s}
-  .pb:hover{transform:translateY(-3px);border-color:#444}
-  .pb.on{border-color:var(--or);background:#241a10}
-  .pb svg{width:34px;height:34px;stroke:var(--or);stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-bottom:16px}
-  .pb b{display:block;font-family:var(--dis);font-size:17px;margin-bottom:4px}
-  .pb span{font-size:13px;color:#8f897e}
-  .answer{margin-top:22px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;background:var(--or);color:var(--bk);border-radius:24px;padding:30px 34px}
-  .answer h3{font-weight:800;font-size:clamp(24px,2.6vw,34px);margin-bottom:8px}
-  .answer p{font-size:16px;line-height:1.55;max-width:620px}
-  .answer .btn{background:var(--bk);color:#fff;white-space:nowrap}
+  /* MARQUEE */
+  .marq{border-block:1px solid var(--lineD);overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--bk2)}
+  .marq .t{display:inline-flex;gap:40px;animation:run 30s linear infinite;color:#9e988e}
+  .marq span{display:inline-flex;align-items:center;gap:40px}
+  .marq span::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--or)}
+  @keyframes run{to{transform:translateX(-50%)}}
 
-  /* ABLAUF */
-  .flow{padding-top:clamp(90px,11vw,150px);padding-bottom:clamp(90px,11vw,150px)}
-  .flow h2{font-weight:800;font-size:clamp(40px,6vw,88px);margin-bottom:50px}
-  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
-  .st{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;position:relative;overflow:hidden}
-  .st::before{counter-increment:s;content:counter(s);position:absolute;right:16px;top:-10px;font-family:var(--dis);font-weight:800;font-size:110px;color:#fbe7d3;line-height:1}
-  .st h3{position:relative;font-weight:700;font-size:21px;margin:70px 0 8px}
-  .st p{position:relative;color:#5a554d;font-size:15px;line-height:1.55}
+  /* BENTO */
+  .sec{padding-top:clamp(90px,11vw,150px);padding-bottom:clamp(90px,11vw,150px)}
+  .head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:44px}
+  .head h2{font-size:clamp(42px,6vw,86px)}
+  .head p{color:#9e988e;max-width:380px;line-height:1.6}
+  .bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:190px;gap:12px}
+  .card{position:relative;border-radius:24px;background:var(--bk2);border:1px solid var(--lineD);padding:24px;overflow:hidden;cursor:pointer;transition:border-color .3s,transform .3s;text-align:left;color:#fff;font:inherit;display:flex;flex-direction:column;justify-content:space-between}
+  .card::before{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--x,50%) var(--y,50%),rgba(255,138,31,.16),transparent 60%);opacity:0;transition:opacity .3s}
+  .card:hover::before{opacity:1}
+  .card:hover{border-color:rgba(255,255,255,.18)}
+  .card.on{border-color:var(--or);box-shadow:0 0 0 1px var(--or) inset}
+  .card>*{position:relative}
+  .card .ic{width:44px;height:44px;border-radius:13px;background:rgba(255,138,31,.12);display:grid;place-items:center}
+  .card .ic svg{width:22px;height:22px;stroke:var(--or);stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round}
+  .card h3{font-size:24px;letter-spacing:-.03em;font-weight:650}
+  .card p{color:#9e988e;font-size:14px;line-height:1.5;margin-top:6px}
+  .card .sel{position:absolute;top:22px;right:22px;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--mute);border:1px solid var(--lineD);border-radius:20px;padding:4px 9px}
+  .card.on .sel{color:#0c0c0c;background:var(--or);border-color:var(--or)}
+  .b-big{grid-column:span 2;grid-row:span 2;background:radial-gradient(120% 120% at 100% 0%,rgba(255,138,31,.22),transparent 55%),var(--bk2)}
+  .b-big h3{font-size:clamp(34px,3.6vw,52px)}
+  .b-big .art{position:absolute;right:28px;top:28px;width:34%;opacity:.9}
+  .b-big>div{max-width:62%}
+  .b-wide{grid-column:1/-1}
+  .cta{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border-radius:24px;padding:22px 24px 22px 28px;background:linear-gradient(100deg,var(--or),#ff6a1f);color:#0c0c0c}
+  .cta b{font-size:clamp(18px,1.8vw,22px);letter-spacing:-.02em}
+  .cta small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.12em;opacity:.7;margin-bottom:4px}
+  .cta .btn{background:#0c0c0c;color:#fff}
 
-  /* WARUM */
-  .why{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,90px);align-items:center;padding-bottom:clamp(90px,11vw,150px)}
-  .why h2{font-weight:800;font-size:clamp(38px,5vw,72px)}
-  .why ul{list-style:none}
-  .why li{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);font-size:17px;line-height:1.45}
-  .why li svg{flex:none;width:26px;height:26px;stroke:var(--or);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
-  .quote{background:#fff;border:1px solid var(--line);border-radius:28px;padding:40px}
-  .quote .stars{color:var(--or);font-size:22px;letter-spacing:4px;margin-bottom:16px}
-  .quote blockquote{font-family:var(--dis);font-weight:700;font-size:clamp(22px,2.2vw,30px);line-height:1.25;letter-spacing:-.02em}
-  .quote small{display:block;margin-top:18px;color:var(--mute)}
+  /* TIMELINE (hell) */
+  .light{background:var(--cream);color:#0c0c0c;border-radius:40px 40px 0 0}
+  .light .head p{color:#6b655c}
+  .tl{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .tl::before{content:"";position:absolute;left:0;right:0;top:22px;height:2px;background:var(--lineL)}
+  .tl .fill{position:absolute;left:0;top:22px;height:2px;background:var(--or);width:var(--p,0%);transition:width .2s linear}
+  .tl .s{position:relative}
+  .tl .n{width:46px;height:46px;border-radius:50%;background:var(--cream);border:2px solid var(--lineL);display:grid;place-items:center;font-family:var(--mono);font-size:13px;margin-bottom:26px;transition:all .4s}
+  .tl .s.act .n{background:var(--or);border-color:var(--or);color:#0c0c0c;box-shadow:0 0 0 6px rgba(255,138,31,.18)}
+  .tl h3{font-size:24px;letter-spacing:-.03em;margin-bottom:8px}
+  .tl p{color:#5e584f;line-height:1.55;font-size:15px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:80px}
+  .fact{background:#fff;border:1px solid var(--lineL);border-radius:24px;padding:28px}
+  .fact b{display:block;font-size:clamp(32px,3.4vw,48px);letter-spacing:-.045em;margin-bottom:6px}
+  .fact span{color:#6b655c;font-size:15px}
+  .quote{margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;background:#0c0c0c;color:#fff;border-radius:24px;padding:30px}
+  .quote q{font-size:clamp(20px,2vw,28px);letter-spacing:-.03em;font-weight:600;quotes:"«" "»"}
+  .quote small{color:var(--mute);font-family:var(--mono);font-size:11px;letter-spacing:.1em}
 
-  /* KONTAKT */
-  .contact{background:var(--bk);color:#fff;padding-top:clamp(90px,11vw,150px);padding-bottom:40px}
-  .cgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,90px)}
-  .contact h2{font-weight:800;font-size:clamp(46px,7vw,110px);margin-bottom:34px}
-  .lines a{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid #2a2a2a;font-family:var(--dis);font-weight:700;font-size:clamp(20px,2.2vw,28px);transition:color .2s}
-  .lines a:hover{color:var(--or)}
-  .lines a small{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.12em;color:#8f897e;text-transform:uppercase}
-  .addr{margin-top:30px;color:#bdb6aa;line-height:1.7}
-  .hours{list-style:none;background:var(--bk2);border-radius:24px;padding:10px 26px}
-  .hours li{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid #2a2a2a;color:#a8a196}
+  /* KONTAKT BENTO */
+  .cb{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .cc b{overflow-wrap:anywhere}
+  .cc{border-radius:24px;background:var(--bk2);border:1px solid var(--lineD);padding:26px;transition:border-color .25s,transform .25s}
+  a.cc:hover{border-color:var(--or);transform:translateY(-3px)}
+  .cc .mono{color:var(--mute);margin-bottom:22px;display:block}
+  .cc b{font-size:clamp(20px,2vw,26px);letter-spacing:-.03em;font-weight:650}
+  .cc.big{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(120% 120% at 0% 100%,rgba(255,138,31,.22),transparent 55%),var(--bk2)}
+  .cc.big h2{font-size:clamp(44px,5.6vw,84px)}
+  .hours{list-style:none}
+  .hours li{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--lineD);font-size:14.5px;color:#9e988e}
   .hours li:last-child{border:0}
-  .hours li.today{color:#fff;font-weight:600}
-  .hours li.today span:first-child::after{content:" · heute";color:var(--or)}
-  .map{margin-top:16px;height:220px;border-radius:24px;overflow:hidden;filter:grayscale(1) invert(.9) contrast(.9)}
-  .map iframe{width:100%;height:100%;border:0}
-  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:90px;padding-top:22px;border-top:1px solid #2a2a2a;font-size:13px;color:#77716a}
+  .hours li.today{color:#fff}
+  .hours li.today span:first-child::after{content:" ●";color:var(--or)}
+  .map{grid-column:span 2;border-radius:24px;overflow:hidden;border:1px solid var(--lineD);min-height:220px;filter:grayscale(1) invert(.9) contrast(.9)}
+  .map iframe{width:100%;height:100%;border:0;display:block;min-height:220px}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:70px;padding-top:22px;padding-bottom:30px;border-top:1px solid var(--lineD);font-size:13px;color:#6f6a62}
 
   .fab{display:none}
-  .up{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
-  .up.in{opacity:1;transform:none}
+  .up{opacity:0;transform:translateY(28px);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
+  .up.in{opacity:1;transform:none;filter:none}
 
   @media (max-width:980px){
     nav,header .btn{display:none}
-    .hero,.why,.cgrid{grid-template-columns:1fr}
-    .phone{width:min(220px,56vw);margin-top:10px}
-    .tool{right:-22px;width:62px;height:62px}
-    .probs{grid-template-columns:repeat(2,1fr)}
-    .answer{grid-template-columns:1fr}
-    .steps{grid-template-columns:1fr 1fr}
-    .fab{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:10px;background:var(--or);color:var(--bk);padding:16px;border-radius:16px;font-weight:700;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
-    .contact{padding-bottom:110px}
+    .hero{grid-template-columns:1fr}
+    .stage{margin-top:30px;width:min(230px,56vw)}
+    .chip.c1{left:-56px}.chip.c2{right:-50px}.chip.c3{left:-30px}
+    .bento{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px}
+    .b-big{grid-column:span 2;grid-row:span 2}
+    .b-wide{grid-column:1/-1}
+    .tl{grid-template-columns:1fr 1fr;row-gap:40px}
+    .tl::before,.tl .fill{display:none}
+    .facts{grid-template-columns:1fr}
+    .cb{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .cc{padding:20px}.cc b{font-size:18px}
+    .cc.big,.map{grid-column:span 2}
+    .fab{display:flex;position:fixed;left:14px;right:14px;bottom:14px;z-index:60;justify-content:center;align-items:center;gap:10px;background:var(--or);color:#0c0c0c;padding:16px;border-radius:16px;font-weight:700;box-shadow:0 14px 34px -12px rgba(255,138,31,.8)}
+    .foot{padding-bottom:100px}
   }
-  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up{opacity:1;transform:none}}
+  @media (max-width:520px){.chip{display:none}.card{padding:18px}.card h3{font-size:18px}.card p{display:none}.b-big p{display:block}.b-big h3{font-size:34px}.b-big>div{max-width:100%}.b-big .art{width:30%;right:18px;top:18px}.card .sel{display:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.up{opacity:1;transform:none;filter:none}}
 </style>
 </head>
 <body>
@@ -142,107 +182,115 @@
 
 <div class="note">Entwurf von Samyan Seyfi · nicht die offizielle Website der Ischtar GmbH</div>
 
-<header class="pad">
-  <a class="logo" href="#"><span class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span><span>Handy Reparatur<small>Ischtar GmbH</small></span></a>
+<header>
+  <a class="logo" href="#"><span class="ic"><svg viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="3"/><path d="M11 18h2"/></svg></span><span>Handy Reparatur<small>ISCHTAR GMBH</small></span></a>
   <nav><a href="#reparatur">Reparaturen</a><a href="#ablauf">Ablauf</a><a href="#kontakt">Kontakt</a></nav>
   <a class="btn or" href="https://wa.me/41762204440" target="_blank" rel="noopener"><svg class="wa"><use href="#wa"/></svg>WhatsApp</a>
 </header>
 
 <section class="hero pad">
   <div>
-    <div class="pill up"><i id="dot"></i><span id="now">Öffnungszeiten</span> · Bahnstrasse 16, beim Bahnhof</div>
-    <h1 class="up">Handy kaputt?<br><span class="u">Wir fixen das.</span></h1>
-    <p class="up">Display, Akku, Mainboard oder Wasserschaden – wir reparieren dein Smartphone direkt in Schwerzenbach. Schnell, fair und persönlich.</p>
+    <div class="badge up"><i id="dot"></i><span id="now">Öffnungszeiten</span> · Bahnstrasse 16, Schwerzenbach</div>
+    <h1 class="up">Handy kaputt?<br><span class="grad">Repariert.</span></h1>
+    <p class="up">Display, Akku, Mainboard oder Wasserschaden – wir bringen dein Smartphone direkt hier in Schwerzenbach wieder zum Laufen. Schnell, fair und persönlich.</p>
     <div class="btns up">
-      <a class="btn or" href="#reparatur">Was ist kaputt? →</a>
-      <a class="btn ln" href="tel:+41433213131">043 321 31 31</a>
+      <a class="btn or" href="#reparatur">Reparatur anfragen</a>
+      <a class="btn gh" href="tel:+41433213131">043 321 31 31</a>
     </div>
-    <div class="trust up">
-      <div><b>Vor Ort</b>Reparatur im Laden</div>
-      <div><b>Fairer Preis</b>Vorher besprochen</div>
-      <div><b>Mo–Sa</b>geöffnet</div>
+    <div class="ticks up">
+      <span><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Reparatur vor Ort</span>
+      <span><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Preis vorher klar</span>
+      <span><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>1 Min. vom Bahnhof</span>
     </div>
   </div>
-  <div class="phone up" aria-hidden="true">
-    <div class="screen">
-      <div class="notch"></div>
-      <svg class="crack" viewBox="0 0 100 200" preserveAspectRatio="none"><path d="M70 40 L58 70 L66 88 L48 112 L56 130 L40 160"/><path d="M58 70 L80 82"/><path d="M48 112 L28 104"/><path d="M56 130 L74 150"/><path d="M66 88 L86 100"/></svg>
-      <div class="ok"><div><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Wie neu.</div></div>
-    </div>
-    <div class="tool"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4Z"/></svg></div>
-  </div>
-</section>
-
-<section class="fix pad" id="reparatur">
-  <h2 class="up">Was ist <span class="or">kaputt?</span></h2>
-  <p class="lead up">Tippe an, was dein Handy hat – und schick uns direkt eine WhatsApp. Wir melden uns mit einer Einschätzung.</p>
-  <div class="probs up" id="probs">
-    <button class="pb on" data-t="Display" data-d="Gesprungenes Glas, Streifen, schwarzer Bildschirm oder Touch reagiert nicht mehr? Wir ersetzen das Display."><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M13 6l-2 4 2 2-2 5"/></svg><b>Display</b><span>Glas &amp; Touch</span></button>
-    <button class="pb" data-t="Akku" data-d="Das Handy ist schnell leer, schaltet sich ab oder der Akku bläht sich auf? Ein neuer Akku bringt die Laufzeit zurück."><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 11v2M7 10v4M10 10v4"/></svg><b>Akku</b><span>Hält nicht mehr</span></button>
-    <button class="pb" data-t="Wasserschaden" data-d="Ins Wasser gefallen? Schalte das Handy aus, nicht laden – und bring es so schnell wie möglich vorbei."><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg><b>Wasserschaden</b><span>Schnell handeln</span></button>
-    <button class="pb" data-t="Mainboard" data-d="Das Handy startet nicht mehr oder hat einen tieferen Defekt? Wir prüfen und reparieren auch auf dem Mainboard."><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg><b>Mainboard</b><span>Startet nicht</span></button>
-    <button class="pb" data-t="Audio" data-d="Kein Ton beim Telefonieren, Mikrofon oder Lautsprecher fallen aus? Häufig steckt der Audio-IC dahinter – das reparieren wir."><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg><b>Audio</b><span>Ton &amp; Mikrofon</span></button>
-    <button class="pb" data-t="Anderes" data-d="Ladebuchse, Kamera, Tasten oder etwas anderes? Beschreib uns kurz das Problem – wir sagen dir, was möglich ist."><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5h0"/></svg><b>Anderes</b><span>Frag uns</span></button>
-  </div>
-  <div class="answer up">
-    <div><h3 id="at">Display</h3><p id="ad">Gesprungenes Glas, Streifen, schwarzer Bildschirm oder Touch reagiert nicht mehr? Wir ersetzen das Display.</p></div>
-    <a class="btn" id="awa" href="#" target="_blank" rel="noopener"><svg class="wa"><use href="#wa"/></svg>Per WhatsApp anfragen</a>
-  </div>
-</section>
-
-<section class="flow pad" id="ablauf">
-  <h2 class="up">So einfach <span class="or">geht's.</span></h2>
-  <div class="steps">
-    <div class="st up"><h3>Vorbeibringen</h3><p>Komm mit deinem Handy in den Laden an der Bahnstrasse 16 – direkt beim Bahnhof.</p></div>
-    <div class="st up"><h3>Diagnose</h3><p>Wir schauen uns das Problem an und sagen dir vorher, was es kostet.</p></div>
-    <div class="st up"><h3>Reparatur</h3><p>Wir reparieren dein Gerät sorgfältig direkt bei uns im Laden.</p></div>
-    <div class="st up"><h3>Abholen</h3><p>Handy abholen und weiter geht's – als wäre nichts gewesen.</p></div>
-  </div>
-</section>
-
-<section class="why pad">
-  <div>
-    <h2 class="up">Warum zu <span class="or">uns?</span></h2>
-    <ul class="up">
-      <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Persönliche Beratung – du sprichst direkt mit dem Techniker.</li>
-      <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Faire Preise, die wir vor der Reparatur mit dir besprechen.</li>
-      <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Viele Reparaturen sind schnell erledigt – frag einfach nach.</li>
-      <li><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Mitten in Schwerzenbach, eine Minute vom Bahnhof.</li>
-    </ul>
-  </div>
-  <div class="quote up">
-    <div class="stars">★★★★★</div>
-    <blockquote>«Echte Google-Bewertung hier einfügen.»</blockquote>
-    <small>Platzhalter – Bewertungen nach Absprache einfügen</small>
-  </div>
-</section>
-
-<section class="contact pad" id="kontakt">
-  <div class="cgrid">
-    <div>
-      <h2 class="up">Ruf an oder<br><span class="or">komm vorbei.</span></h2>
-      <div class="lines up">
-        <a href="tel:+41433213131"><span>043 321 31 31</span><small>Laden</small></a>
-        <a href="tel:+41762204440"><span>076 220 44 40</span><small>Mobile</small></a>
-        <a href="https://wa.me/41762204440" target="_blank" rel="noopener"><span>WhatsApp</span><small>Schreiben →</small></a>
-        <a href="mailto:ischtargmbh@gmx.ch"><span>ischtargmbh@gmx.ch</span><small>E-Mail</small></a>
+  <div class="stage up" id="stage" aria-hidden="true">
+    <div class="phone" id="phone">
+      <div class="screen">
+        <div class="wall"></div><div class="isl"></div>
+        <div class="shade"></div>
+        <svg class="crack" viewBox="0 0 100 200" preserveAspectRatio="none"><path d="M72 36 L60 66 L67 86 L49 110 L57 128 L41 160 L46 188"/><path d="M60 66 L82 78"/><path d="M49 110 L26 102 L12 108"/><path d="M57 128 L76 148"/><path d="M67 86 L88 98"/><path d="M41 160 L22 172"/></svg>
+        <div class="scan"></div>
+        <div class="done"><div><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Wie neu.</div></div>
       </div>
-      <p class="addr up">Ischtar GmbH · Handy Reparatur<br>Bahnstrasse 16<br>8603 Schwerzenbach</p>
     </div>
-    <div>
-      <ul class="hours up" id="hours">
-        <li data-d="1"><span>Montag</span><span>10–19 Uhr</span></li>
-        <li data-d="2"><span>Dienstag</span><span>10–19 Uhr</span></li>
-        <li data-d="3"><span>Mittwoch</span><span>10–19 Uhr</span></li>
-        <li data-d="4"><span>Donnerstag</span><span>10–19 Uhr</span></li>
-        <li data-d="5"><span>Freitag</span><span>10–19 Uhr</span></li>
-        <li data-d="6"><span>Samstag</span><span>10–17 Uhr</span></li>
+    <div class="chip c1"><span class="d"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/></svg></span><span><b>Display</b><small>ERSETZT</small></span></div>
+    <div class="chip c2"><span class="d"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 11v2M7 10v4M10 10v4M13 10v4"/></svg></span><span><b>Akku 100 %</b><small>NEU</small></span></div>
+    <div class="chip c3"><span class="d"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Bereit</b><small>ZUM ABHOLEN</small></span></div>
+  </div>
+</section>
+
+<div class="marq" aria-hidden="true"><div class="t mono">
+  <span>Display</span><span>Akku</span><span>Mainboard</span><span>Audio-IC</span><span>Wasserschaden</span><span>Ladebuchse</span><span>Kamera</span>
+  <span>Display</span><span>Akku</span><span>Mainboard</span><span>Audio-IC</span><span>Wasserschaden</span><span>Ladebuchse</span><span>Kamera</span>
+</div></div>
+
+<section class="sec pad" id="reparatur">
+  <div class="head">
+    <h2 class="up">Was ist <span class="grad">kaputt?</span></h2>
+    <p class="up">Wähle das Problem – wir öffnen dir eine fertige WhatsApp-Nachricht. Du ergänzt nur noch dein Modell.</p>
+  </div>
+  <div class="bento up" id="bento">
+    <button class="card b-big on" data-t="Display"><span class="sel">GEWÄHLT</span>
+      <span class="ic"><svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M13 6l-2 4 2 2-2 5"/></svg></span>
+      <div><h3>Display</h3><p>Gesprungenes Glas, Streifen, schwarzer Bildschirm oder Touch reagiert nicht – wir ersetzen das Display.</p></div>
+      <svg class="art" viewBox="0 0 200 260" fill="none"><rect x="40" y="10" width="120" height="240" rx="26" stroke="#ff8a1f" stroke-opacity=".5" stroke-width="2"/><path d="M110 40 L96 90 L108 118 L84 160 L96 190 L78 230" stroke="#ff8a1f" stroke-width="2" stroke-linecap="round"/><path d="M96 90 L130 104M84 160 L54 150M96 190 L124 214" stroke="#ff8a1f" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="card" data-t="Akku"><span class="sel">WÄHLEN</span><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="16" height="10" rx="2"/><path d="M21 11v2M7 10v4M10 10v4"/></svg></span><div><h3>Akku</h3><p>Schnell leer oder geht aus</p></div></button>
+    <button class="card" data-t="Wasserschaden"><span class="sel">WÄHLEN</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 7 6 11a6 6 0 0 1-12 0c0-4 6-11 6-11z"/></svg></span><div><h3>Wasserschaden</h3><p>Ausschalten, nicht laden</p></div></button>
+    <button class="card" data-t="Mainboard"><span class="sel">WÄHLEN</span><span class="ic"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg></span><div><h3>Mainboard</h3><p>Startet nicht mehr</p></div></button>
+    <button class="card" data-t="Audio"><span class="sel">WÄHLEN</span><span class="ic"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg></span><div><h3>Audio-IC</h3><p>Kein Ton, Mikrofon defekt</p></div></button>
+    <button class="card b-wide" data-t="Anderes"><span class="sel">WÄHLEN</span><span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5h0"/></svg></span><div><h3>Etwas anderes?</h3><p>Ladebuchse, Kamera, Tasten – beschreib uns kurz das Problem.</p></div></button>
+  </div>
+  <div class="cta up">
+    <div><small>DEINE AUSWAHL</small><b id="ctaT">Display reparieren lassen</b></div>
+    <a class="btn" id="ctaA" href="#" target="_blank" rel="noopener"><svg class="wa"><use href="#wa"/></svg>Per WhatsApp anfragen</a>
+  </div>
+</section>
+
+<section class="light sec pad" id="ablauf">
+  <div class="head">
+    <h2 class="up">In 4 Schritten<br>wieder <span style="color:var(--or)">online.</span></h2>
+    <p class="up">Kein Einschicken, kein Warten auf die Post – alles passiert bei uns im Laden.</p>
+  </div>
+  <div class="tl" id="tl"><div class="fill" id="fill"></div>
+    <div class="s up"><div class="n">01</div><h3>Vorbeibringen</h3><p>Komm in den Laden an der Bahnstrasse 16 – direkt beim Bahnhof.</p></div>
+    <div class="s up"><div class="n">02</div><h3>Diagnose</h3><p>Wir prüfen das Gerät und sagen dir vorher, was es kostet.</p></div>
+    <div class="s up"><div class="n">03</div><h3>Reparatur</h3><p>Sorgfältig repariert, direkt bei uns vor Ort.</p></div>
+    <div class="s up"><div class="n">04</div><h3>Abholen</h3><p>Handy abholen – und weiter geht's, als wäre nichts gewesen.</p></div>
+  </div>
+  <div class="facts">
+    <div class="fact up"><b>Vor Ort</b><span>Reparatur im Laden in Schwerzenbach</span></div>
+    <div class="fact up"><b>Fair</b><span>Preis wird vor der Reparatur besprochen</span></div>
+    <div class="fact up"><b>Mo–Sa</b><span>Unter der Woche bis 19 Uhr geöffnet</span></div>
+  </div>
+  <div class="quote up"><q>Echte Google-Bewertung hier einfügen.</q><small>PLATZHALTER · NACH ABSPRACHE</small></div>
+</section>
+
+<section class="sec pad" id="kontakt">
+  <div class="cb">
+    <div class="cc big up">
+      <span class="mono">KONTAKT</span>
+      <h2>Ruf an oder<br><span class="grad">komm vorbei.</span></h2>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn or" href="https://wa.me/41762204440" target="_blank" rel="noopener"><svg class="wa"><use href="#wa"/></svg>WhatsApp</a><a class="btn gh" href="mailto:ischtargmbh@gmx.ch">E-Mail</a></div>
+    </div>
+    <a class="cc up" href="tel:+41433213131"><span class="mono">LADEN</span><b>043 321 31 31</b></a>
+    <a class="cc up" href="tel:+41762204440"><span class="mono">MOBILE</span><b>076 220 44 40</b></a>
+    <div class="cc up"><span class="mono">ADRESSE</span><b>Bahnstrasse 16</b><p style="color:#9e988e;margin-top:6px">8603 Schwerzenbach</p></div>
+    <a class="cc up" href="mailto:ischtargmbh@gmx.ch"><span class="mono">E-MAIL</span><b style="font-size:18px">ischtargmbh@gmx.ch</b></a>
+    <div class="cc up" style="grid-column:span 2"><span class="mono">ÖFFNUNGSZEITEN</span>
+      <ul class="hours" id="hours">
+        <li data-d="1"><span>Montag</span><span>10–19</span></li>
+        <li data-d="2"><span>Dienstag</span><span>10–19</span></li>
+        <li data-d="3"><span>Mittwoch</span><span>10–19</span></li>
+        <li data-d="4"><span>Donnerstag</span><span>10–19</span></li>
+        <li data-d="5"><span>Freitag</span><span>10–19</span></li>
+        <li data-d="6"><span>Samstag</span><span>10–17</span></li>
         <li data-d="0"><span>Sonntag</span><span>geschlossen</span></li>
       </ul>
-      <div class="map up"><iframe loading="lazy" title="Karte" src="https://www.openstreetmap.org/export/embed.html?bbox=8.6529%2C47.3828%2C8.6649%2C47.3883&amp;layer=mapnik&amp;marker=47.38551%2C8.65893"></iframe></div>
     </div>
+    <div class="map up"><iframe loading="lazy" title="Karte" src="https://www.openstreetmap.org/export/embed.html?bbox=8.6529%2C47.3828%2C8.6649%2C47.3883&amp;layer=mapnik&amp;marker=47.38551%2C8.65893"></iframe></div>
   </div>
-  <div class="foot"><span>© Ischtar GmbH · Schwerzenbach</span><span>Impressum · Datenschutz</span></div>
+  <div class="foot"><span>© Ischtar GmbH · Handy Reparatur Schwerzenbach</span><span>Impressum · Datenschutz</span></div>
 </section>
 
 <a class="fab" href="https://wa.me/41762204440" target="_blank" rel="noopener"><svg class="wa"><use href="#wa"/></svg>Reparatur per WhatsApp anfragen</a>
@@ -250,12 +298,21 @@
 <script>
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
   document.querySelectorAll('.up').forEach(el=>io.observe(el));
-  // Problem-Wahl mit vorausgefüllter WhatsApp
-  const pbs=document.querySelectorAll('.pb'),at=document.getElementById('at'),ad=document.getElementById('ad'),awa=document.getElementById('awa');
-  function pick(b){pbs.forEach(x=>x.classList.toggle('on',x===b));at.textContent=b.dataset.t;ad.textContent=b.dataset.d;
-    const msg='Hallo! Mein Handy hat ein Problem: '+b.dataset.t+'. Modell: ';
-    awa.href='https://wa.me/41762204440?text='+encodeURIComponent(msg);}
-  pbs.forEach(b=>b.onclick=()=>pick(b)); pick(pbs[0]);
+  // 3D-Neigung des Handys
+  const ph=document.getElementById('phone');
+  if(matchMedia('(hover:hover)').matches){addEventListener('mousemove',e=>{const x=e.clientX/innerWidth-.5,y=e.clientY/innerHeight-.5;ph.style.transform=`rotateY(${-16+x*24}deg) rotateX(${6-y*14}deg)`},{passive:true})}
+  else{addEventListener('scroll',()=>{const p=Math.min(scrollY/600,1);ph.style.transform=`rotateY(${-16+p*16}deg) rotateX(${6-p*6}deg)`},{passive:true})}
+  // Lichtschein auf Karten + Auswahl
+  const cards=document.querySelectorAll('.card'),ctaT=document.getElementById('ctaT'),ctaA=document.getElementById('ctaA');
+  function pick(c){cards.forEach(x=>{x.classList.toggle('on',x===c);x.querySelector('.sel').textContent=x===c?'GEWÄHLT':'WÄHLEN'});
+    const t=c.dataset.t; ctaT.textContent=t==='Anderes'?'Anderes Problem beschreiben':t+' reparieren lassen';
+    ctaA.href='https://wa.me/41762204440?text='+encodeURIComponent('Hallo! Mein Handy hat ein Problem: '+t+'. Modell: ');}
+  cards.forEach(c=>{c.addEventListener('click',()=>{pick(c);if(innerWidth<980)document.querySelector('.cta').scrollIntoView({behavior:'smooth',block:'center'})});
+    c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left+'px');c.style.setProperty('--y',e.clientY-r.top+'px')})});
+  pick(cards[0]);
+  // Timeline füllt sich beim Scrollen
+  const tl=document.getElementById('tl'),fill=document.getElementById('fill'),steps=tl.querySelectorAll('.s');
+  addEventListener('scroll',()=>{const r=tl.getBoundingClientRect(),p=Math.max(0,Math.min(1,(innerHeight*.75-r.top)/(r.height+innerHeight*.3)));fill.style.setProperty('--p',p*100+'%');steps.forEach((s,i)=>s.classList.toggle('act',p>=i/steps.length+.02))},{passive:true});
   // Heute geöffnet?
   const H={0:null,1:[600,1140],2:[600,1140],3:[600,1140],4:[600,1140],5:[600,1140],6:[600,1020]};
   const n=new Date(new Date().toLocaleString('en-US',{timeZone:'Europe/Zurich'})),d=n.getDay(),m=n.getHours()*60+n.getMinutes(),t=H[d],on=!!t&&m>=t[0]&&m<t[1];
