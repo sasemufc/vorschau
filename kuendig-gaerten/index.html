@@ -6,182 +6,143 @@
 <meta name="robots" content="noindex,nofollow">
 <title>Kündig Gärten – Gartenpflege und Gartenbau in Wetzikon</title>
 <meta name="description" content="Kündig Gärten, Jens Kündig, Wetzikon: Gartenpflege, Gartenbau, Materiallieferung und Pflanzenhandel.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232c4a3a'/%3E%3Cpath d='M9 23c0-9 6-14 15-14 0 9-5 15-15 14z' fill='%23d9a441'/%3E%3C/svg%3E">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#f4f1ea; --paper2:#ebe6da; --ink:#1d2a21; --soft:#55645a;
-  --deep:#2c4a3a; --sage:#9bb09a; --ochre:#d9a441; --line:#d6d0c1;
-  --serif:'Fraunces',Georgia,serif; --sans:'Work Sans',system-ui,sans-serif;
+  --bg:#fbfaf6; --tint:#eef2e8; --ink:#171717; --mute:#5d625a;
+  --green:#2a5a34; --leaf:#3d8c4e; --bark:#5a4636; --line:#d9ddd0;
+  --head:'Archivo','Helvetica Neue',Arial,sans-serif; --body:'Source Sans 3','Helvetica Neue',Arial,sans-serif;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--paper);color:var(--ink);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
+body{font-family:var(--body);font-size:1.06rem;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:clip;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{width:min(1120px,100% - 40px);margin-inline:auto}
-.draft{background:var(--ink);color:#e9e4d6;font-size:.78rem;text-align:center;padding:.55rem 1rem;letter-spacing:.01em}
-.draft b{color:var(--ochre);font-weight:600}
+.wrap{width:min(1100px,100% - 40px);margin-inline:auto}
 
-/* nav */
-header{position:sticky;top:0;z-index:50;background:rgba(244,241,234,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
-.brand{display:flex;align-items:center;gap:.65rem;text-decoration:none}
-.brand svg{width:34px;height:34px;flex:none}
-.brand span{font-family:var(--serif);font-weight:600;font-size:1.28rem;letter-spacing:-.01em}
-.brand em{font-style:normal;color:var(--deep)}
-nav ul{display:flex;gap:1.8rem;list-style:none;align-items:center}
-nav a{text-decoration:none;font-size:.93rem;color:var(--soft);transition:color .2s}
-nav a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--deep);color:#fff!important;padding:.8rem 1.3rem;border-radius:999px;text-decoration:none;font-weight:500;font-size:.95rem;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,background .2s}
-.btn:hover{background:#1f372b;transform:translateY(-2px)}
-.btn.ghost{background:transparent;color:var(--ink)!important;border:1.5px solid var(--ink)}
-.btn.ghost:hover{background:var(--ink);color:#fff!important}
-.burger{display:none;background:none;border:0;width:42px;height:42px;cursor:pointer}
-.burger i{display:block;height:2px;background:var(--ink);margin:6px 9px;transition:.25s}
+.draft{background:var(--ink);color:#ddd;font-size:.78rem;text-align:center;padding:.5rem 1rem}
+.draft b{color:#9fd3a9}
 
-/* hero */
-.hero{padding:clamp(2.5rem,6vw,5rem) 0 clamp(2.5rem,5vw,4rem)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:3rem;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);font-weight:600;margin-bottom:1.4rem}
-.kicker:before{content:"";width:28px;height:1.5px;background:var(--deep)}
-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.03;letter-spacing:-.025em}
-h1 i{color:var(--deep);font-style:italic}
-.lead{font-size:1.12rem;color:var(--soft);max-width:34rem;margin:1.5rem 0 2rem}
-.cta{display:flex;flex-wrap:wrap;gap:.8rem}
-.facts{display:flex;flex-wrap:wrap;gap:2rem;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--line)}
-.facts div{font-size:.88rem;color:var(--soft)}
-.facts b{display:block;font-family:var(--serif);font-size:1.5rem;color:var(--ink);font-weight:600;line-height:1.2}
-.art{position:relative;aspect-ratio:1/1.05;max-width:520px;margin-inline:auto;width:100%}
-.art .disc{position:absolute;inset:6% 4% 4% 8%;background:var(--deep);border-radius:46% 54% 50% 50%/52% 48% 52% 48%}
-.art .disc2{position:absolute;width:34%;aspect-ratio:1;right:0;top:0;background:var(--ochre);border-radius:50%}
-.art svg{position:absolute;inset:0;width:100%;height:100%}
-.leaf{fill:var(--sage);stroke:var(--paper);stroke-width:1.2;opacity:0;transform-origin:var(--ox) var(--oy);transform:scale(.3) rotate(var(--r0));animation:grow .9s cubic-bezier(.2,.9,.25,1.1) forwards;animation-delay:var(--d)}
-.leaf.alt{fill:#cfdcc5}
-.stem{fill:none;stroke:var(--paper);stroke-width:2.4;stroke-linecap:round;stroke-dasharray:var(--l);stroke-dashoffset:var(--l);animation:draw 1.6s ease forwards .2s}
-@keyframes grow{to{opacity:1;transform:scale(1) rotate(0)}}
-@keyframes draw{to{stroke-dashoffset:0}}
-.tag{position:absolute;left:-2%;bottom:8%;background:var(--paper);border-radius:14px;padding:.8rem 1rem;box-shadow:0 14px 34px -14px rgba(29,42,33,.45);font-size:.84rem;line-height:1.35}
-.tag b{font-family:var(--serif);font-size:1.05rem;display:block}
+header{position:sticky;top:0;z-index:50;background:rgba(251,250,246,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:1rem}
+.nav .logo img{height:54px;width:auto;display:block}
+nav ul{display:flex;gap:1.9rem;list-style:none;align-items:center}
+nav a{text-decoration:none;font-family:var(--head);font-weight:500;font-size:.92rem;letter-spacing:.01em}
+nav a:hover{color:var(--leaf)}
+.tel{background:var(--green);color:#fff!important;padding:.6rem 1.05rem;border-radius:4px}
+.tel:hover{background:var(--ink);color:#fff!important}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;height:2.5px;background:var(--ink);margin:6px 9px}
 
-/* sections */
-section{padding:clamp(3.5rem,8vw,6.5rem) 0}
-.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--deep);font-weight:600;margin-bottom:.9rem}
-h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.2vw,3.1rem);line-height:1.08;letter-spacing:-.02em;max-width:22ch}
-h2 i{font-style:italic;color:var(--deep)}
-.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
-.sec-head p{max-width:30rem;color:var(--soft)}
+.hero{padding:clamp(2rem,5vw,4.5rem) 0 clamp(3rem,6vw,5rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center}
+h1{font-family:var(--head);font-weight:800;font-size:clamp(2.2rem,5vw,3.9rem);line-height:1.04;letter-spacing:-.02em}
+h1 span{color:var(--green)}
+.lead{margin:1.4rem 0 2rem;color:var(--mute);max-width:32rem}
+.btns{display:flex;flex-wrap:wrap;gap:.7rem}
+.btn{display:inline-block;font-family:var(--head);font-weight:700;font-size:.95rem;padding:.9rem 1.5rem;border-radius:4px;text-decoration:none;background:var(--green);color:#fff;border:2px solid var(--green);transition:.2s;cursor:pointer}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn.o:hover{background:var(--ink);color:#fff}
+.hero-logo{background:var(--tint);padding:clamp(1.5rem,4vw,3rem);display:grid;place-items:center;border-radius:4px;position:relative}
+.hero-logo img{width:100%;max-width:470px;height:auto;display:block;transform-origin:20% 80%;animation:sway 7s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(.8deg)}}
 
-/* services */
-.services{background:var(--paper2)}
-.svc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.1rem}
-.card{background:var(--paper);border-radius:20px;padding:1.7rem 1.5rem 1.6rem;display:flex;flex-direction:column;gap:.9rem;min-height:290px;position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-6px);box-shadow:0 22px 40px -22px rgba(29,42,33,.4)}
-.card .n{font-family:var(--serif);font-style:italic;color:var(--ochre);font-size:1.1rem}
-.card svg{width:54px;height:54px;stroke:var(--deep);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.card h3{font-family:var(--serif);font-weight:600;font-size:1.4rem;line-height:1.15}
-.card p{font-size:.93rem;color:var(--soft)}
-.card:after{content:"";position:absolute;right:-30px;bottom:-30px;width:90px;height:90px;border-radius:50%;background:var(--sage);opacity:.18;transition:transform .4s}
-.card:hover:after{transform:scale(2.2)}
+section{padding:clamp(3rem,7vw,5.5rem) 0}
+.label{font-family:var(--head);font-weight:700;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--leaf);margin-bottom:.8rem}
+h2{font-family:var(--head);font-weight:800;font-size:clamp(1.8rem,3.6vw,2.7rem);line-height:1.08;letter-spacing:-.015em;max-width:20ch}
 
-/* Anfrage-Builder */
-.builder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:start}
-.panel{background:var(--deep);color:#eef0e6;border-radius:26px;padding:clamp(1.6rem,3.5vw,2.6rem)}
-.panel h3{font-family:var(--serif);font-weight:400;font-size:1.7rem;margin-bottom:.4rem}
-.panel>p{color:#b9c8b8;font-size:.95rem;margin-bottom:1.5rem}
-.chips{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:1.3rem}
+/* Leistungen als Liste */
+.list{margin-top:2.4rem;border-top:2px solid var(--ink)}
+.item{display:grid;grid-template-columns:70px minmax(0,.8fr) minmax(0,1.2fr);gap:1.5rem;padding:1.6rem 0;border-bottom:1px solid var(--line);align-items:baseline;transition:background .2s,padding .2s}
+.item:hover{background:var(--tint);padding-inline:1rem}
+.item .no{font-family:var(--head);font-weight:800;color:var(--leaf);font-size:1.05rem}
+.item h3{font-family:var(--head);font-weight:800;font-size:1.55rem;line-height:1.1}
+.item p{color:var(--mute)}
+
+.tint{background:var(--tint)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:start}
+
+/* Anfrage */
+.form{background:var(--bg);border:2px solid var(--ink);padding:clamp(1.4rem,3vw,2.2rem);border-radius:4px}
+.form h3{font-family:var(--head);font-weight:800;font-size:1.4rem;margin-bottom:.3rem}
+.form>p{color:var(--mute);font-size:.95rem;margin-bottom:1.2rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.1rem}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
-.chip span{display:inline-block;padding:.55rem 1rem;border:1.5px solid #5f7e6c;border-radius:999px;font-size:.9rem;transition:.2s;cursor:pointer}
-.chip input:checked+span{background:var(--ochre);border-color:var(--ochre);color:var(--ink);font-weight:500}
-.chip input:focus-visible+span{outline:2px solid #fff;outline-offset:2px}
-.field{display:block;margin-bottom:1rem}
-.field label{display:block;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:#a9bba8;margin-bottom:.35rem}
-.field input,.field textarea{width:100%;background:rgba(255,255,255,.07);border:1.5px solid #4f6d5c;border-radius:12px;padding:.8rem .9rem;color:#fff;font:inherit;font-size:.97rem}
-.field input::placeholder,.field textarea::placeholder{color:#8da28f}
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--ochre)}
-.panel .btn{background:var(--ochre);color:var(--ink)!important;width:100%;justify-content:center;font-weight:600}
-.panel .btn:hover{background:#e6b552}
-.note{font-size:.8rem;color:#9db29c;margin-top:.8rem}
-.steps{list-style:none;display:grid;gap:1.5rem;counter-reset:s}
-.steps li{display:grid;grid-template-columns:54px 1fr;gap:1.1rem;counter-increment:s;padding-bottom:1.5rem;border-bottom:1px solid var(--line)}
-.steps li:last-child{border:0}
-.steps li:before{content:counter(s);width:54px;height:54px;border-radius:50%;border:1.5px solid var(--deep);display:grid;place-items:center;font-family:var(--serif);font-size:1.4rem;color:var(--deep)}
-.steps h4{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin-bottom:.2rem}
-.steps p{color:var(--soft);font-size:.96rem}
+.chip span{display:inline-block;padding:.45rem .9rem;border:1.5px solid var(--ink);border-radius:4px;font-size:.92rem;cursor:pointer;transition:.15s}
+.chip input:checked+span{background:var(--green);border-color:var(--green);color:#fff}
+.chip input:focus-visible+span{outline:2px solid var(--leaf);outline-offset:2px}
+.f{margin-bottom:.9rem}
+.f label{display:block;font-family:var(--head);font-weight:600;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;margin-bottom:.3rem}
+.f input,.f textarea{width:100%;border:1.5px solid #b9bfae;background:#fff;border-radius:4px;padding:.7rem .8rem;font:inherit;font-size:1rem}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--green)}
+.form .btn{width:100%;text-align:center}
+.hint{font-size:.85rem;color:var(--mute);margin-top:.7rem}
 
-/* about */
-.about{background:var(--ink);color:#ece8dc}
-.about-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:3.5rem;align-items:center}
-.photo{aspect-ratio:4/5;border-radius:22px;background:repeating-linear-gradient(135deg,#243228 0 14px,#2a392e 14px 28px);display:grid;place-items:center;text-align:center;color:#8fa391;font-size:.88rem;padding:1.5rem;border:1px dashed #4a5f4f}
-.about .eyebrow{color:var(--ochre)}
-.about h2{color:#fff}
-.about h2 i{color:var(--ochre)}
-.about p{color:#c4ccbf;margin-top:1.3rem;max-width:36rem}
-.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
-.badges span{border:1px solid #4a5f4f;border-radius:999px;padding:.45rem .95rem;font-size:.85rem;color:#d6dccd}
+.steps{list-style:none;margin-top:2rem;display:grid;gap:1.6rem}
+.steps li{padding-left:1.4rem;border-left:4px solid var(--leaf)}
+.steps h4{font-family:var(--head);font-weight:800;font-size:1.2rem}
+.steps p{color:var(--mute)}
 
-/* contact */
-.contact-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1.2rem}
-.cbox{background:var(--paper2);border-radius:22px;padding:2rem;display:flex;flex-direction:column;gap:1.3rem}
-.row{display:grid;grid-template-columns:44px 1fr;gap:1rem;align-items:center;text-decoration:none}
-.row .ic{width:44px;height:44px;border-radius:50%;background:var(--deep);display:grid;place-items:center}
-.row .ic svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.row small{display:block;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
-.row b{font-family:var(--serif);font-size:1.2rem;font-weight:600;overflow-wrap:anywhere}
-.mapcard{border-radius:22px;background:var(--deep);color:#eef0e6;padding:2rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.5rem;position:relative;overflow:hidden;min-height:280px}
-.mapcard svg.grid{position:absolute;inset:0;width:100%;height:100%;opacity:.22}
-.mapcard>*{position:relative}
-.mapcard h3{font-family:var(--serif);font-weight:400;font-size:1.8rem;line-height:1.15}
-.mapcard p{color:#b9c8b8;font-size:.95rem;margin-top:.5rem}
-.mapcard .btn{background:var(--ochre);color:var(--ink)!important;align-self:flex-start;font-weight:600}
+/* Über */
+.facts{margin-top:1.6rem;display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:150px 1fr;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--line)}
+.facts dt{font-family:var(--head);font-weight:600;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--mute);padding-top:.15rem}
+.facts dd{font-weight:500}
+.about p{color:var(--mute);margin-top:1.2rem;max-width:34rem}
 
-footer{border-top:1px solid var(--line);padding:2rem 0 2.4rem;font-size:.85rem;color:var(--soft)}
-.foot{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+/* Kontakt */
+.contact{background:var(--green);color:#fff}
+.contact .label{color:#a7d8b0}
+.contact h2{max-width:none}
+.big{display:grid;gap:.2rem;margin-top:2rem}
+.big a{font-family:var(--head);font-weight:800;font-size:clamp(1.5rem,4.2vw,2.8rem);text-decoration:none;line-height:1.25;overflow-wrap:anywhere;width:fit-content;border-bottom:3px solid transparent}
+.big a:hover{border-color:#a7d8b0}
+.addr{margin-top:2rem;display:flex;gap:1.5rem 3rem;flex-wrap:wrap;color:#d3e8d6}
+.addr a{color:#fff}
 
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+footer{padding:1.6rem 0 2rem;font-size:.86rem;color:var(--mute)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.foot img{height:34px;width:auto}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.leaf,.stem{animation:none;opacity:1;transform:none;stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-logo img{animation:none}}
 
-@media (max-width:960px){
-  .svc{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .hero-grid,.builder,.about-grid,.contact-grid{grid-template-columns:minmax(0,1fr)}
-  .art{max-width:420px}
-  .photo{aspect-ratio:16/10}
+@media (max-width:900px){
+  .hero-grid,.two{grid-template-columns:minmax(0,1fr)}
+  .item{grid-template-columns:44px minmax(0,1fr);gap:.4rem 1rem}
+  .item p{grid-column:2}
 }
 @media (max-width:760px){
   .burger{display:block}
-  nav ul{position:absolute;left:0;right:0;top:68px;background:var(--paper);flex-direction:column;align-items:flex-start;padding:1.2rem 20px 1.6rem;gap:1.1rem;border-bottom:1px solid var(--line);display:none}
+  nav ul{position:absolute;left:0;right:0;top:74px;background:var(--bg);flex-direction:column;align-items:flex-start;padding:1.2rem 20px 1.5rem;gap:1.1rem;border-bottom:1px solid var(--line);display:none}
   nav ul.open{display:flex}
-  nav .hide-m{display:none}
-  .svc{grid-template-columns:minmax(0,1fr)}
-  .card{min-height:0}
-  .facts{gap:1.3rem}
-  .tag{left:2%}
+  .facts div{grid-template-columns:1fr;gap:.1rem}
+  .nav .logo img{height:46px}
 }
 </style>
 </head>
 <body>
 
-<div class="draft"><b>Entwurf</b> von Samyan Seyfi – nicht die offizielle Website von Kündig Gärten. Texte und Bilder sind Platzhalter.</div>
+<div class="draft"><b>Entwurf</b> von Samyan Seyfi – nicht die offizielle Website von Kündig Gärten. Texte sind Platzhalter, Fotos folgen.</div>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top" aria-label="Kündig Gärten">
-      <svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="17" fill="#2c4a3a"/><path d="M9.5 24.5c0-9 5.6-14.5 15-14.5 0 9.2-5 15.4-15 14.5z" fill="#d9a441"/><path d="M9.5 24.5C13 19 17 15.5 21 13.5" stroke="#2c4a3a" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
-      <span>Kündig <em>Gärten</em></span>
-    </a>
+    <a class="logo" href="#top" aria-label="Kündig Gärten, Startseite"><img src="logo.png" alt="Kündig Gärten" width="90" height="55"></a>
     <nav>
       <ul id="menu">
         <li><a href="#leistungen">Leistungen</a></li>
         <li><a href="#anfrage">Anfrage</a></li>
         <li><a href="#ueber">Über uns</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
-        <li class="hide-m"><a class="btn" href="tel:+41763930242">076 393 02 42</a></li>
+        <li><a class="tel" href="tel:+41763930242">076 393 02 42</a></li>
       </ul>
     </nav>
-    <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><i></i><i></i></button>
+    <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><i></i><i></i><i></i></button>
   </div>
 </header>
 
@@ -189,105 +150,86 @@ footer{border-top:1px solid var(--line);padding:2rem 0 2.4rem;font-size:.85rem;c
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <div class="kicker">Wetzikon ZH</div>
-      <h1>Gartenpflege und Gartenbau, <i>die man sieht.</i></h1>
-      <p class="lead">Kündig Gärten kümmert sich um Pflege, Neuanlagen und Pflanzen. Jens Kündig ist direkt für Sie da, per Telefon, Mail oder WhatsApp.</p>
-      <div class="cta">
+      <h1>Gartenpflege und Gartenbau in <span>Wetzikon.</span></h1>
+      <p class="lead">Jens Kündig pflegt und baut Gärten, liefert das Material dazu und handelt mit Pflanzen. Sie sprechen direkt mit ihm, vom ersten Anruf bis zum fertigen Garten.</p>
+      <div class="btns">
         <a class="btn" href="#anfrage">Anfrage stellen</a>
-        <a class="btn ghost" href="tel:+41763930242">Anrufen</a>
-      </div>
-      <div class="facts">
-        <div><b>2022</b>gegründet in Wetzikon</div>
-        <div><b>4</b>Tätigkeitsfelder</div>
-        <div><b>1</b>Ansprechperson</div>
+        <a class="btn o" href="tel:+41763930242">076 393 02 42</a>
       </div>
     </div>
-    <div class="art" aria-hidden="true">
-      <div class="disc"></div><div class="disc2"></div>
-      <svg id="plant" viewBox="0 0 400 420"></svg>
-      <div class="tag"><b>Jens Kündig</b>Inhaber, Wetzikon</div>
-    </div>
+    <div class="hero-logo"><img src="logo.png" alt="Kündig Gärten, Logo mit Kastanienzweig" width="994" height="606"></div>
   </div>
 </section>
 
-<section class="services" id="leistungen">
+<section id="leistungen" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head reveal">
-      <div><div class="eyebrow">Leistungen</div><h2>Vier Dinge, <i>ein Betrieb.</i></h2></div>
-      <p>Vom regelmässigen Unterhalt bis zur neuen Bepflanzung. Was genau für Ihren Garten passt, klären wir gemeinsam vor Ort.</p>
-    </div>
-    <div class="svc">
-      <article class="card reveal"><span class="n">01</span>
-        <svg viewBox="0 0 56 56"><path d="M10 44h36"/><path d="M18 44V30l10-8 10 8v14"/><path d="M28 22V10M22 14l6-4 6 4"/></svg>
-        <h3>Gartenpflege</h3><p>Regelmässiger Unterhalt, damit der Garten das ganze Jahr gepflegt aussieht: Rasen, Hecken, Beete.</p></article>
-      <article class="card reveal"><span class="n">02</span>
-        <svg viewBox="0 0 56 56"><path d="M8 40c8-4 12-4 20 0s12 4 20 0"/><path d="M8 30c8-4 12-4 20 0s12 4 20 0"/><path d="M28 24V12"/><path d="M28 16c-6 0-8-4-8-6 6 0 8 3 8 6zM28 14c6 0 8-4 8-6-6 0-8 3-8 6z"/></svg>
-        <h3>Gartenbau</h3><p>Neu anlegen oder umgestalten: Beete, Rasenflächen, Wege und Sitzplätze nach Ihren Vorstellungen.</p></article>
-      <article class="card reveal"><span class="n">03</span>
-        <svg viewBox="0 0 56 56"><rect x="8" y="26" width="30" height="16" rx="2"/><path d="M38 31h8l4 5v6H38"/><circle cx="18" cy="44" r="4" fill="#f4f1ea"/><circle cx="42" cy="44" r="4" fill="#f4f1ea"/></svg>
-        <h3>Material liefern</h3><p>Erde, Rindenmulch, Kies und mehr. Auf Wunsch gleich mitgeliefert, damit Sie nichts selbst besorgen müssen.</p></article>
-      <article class="card reveal"><span class="n">04</span>
-        <svg viewBox="0 0 56 56"><path d="M14 48h28l-3-16H17z"/><path d="M28 32V18"/><path d="M28 24c-8 0-10-6-10-9 8 0 10 4 10 9zM28 20c7 0 9-5 9-8-7 0-9 4-9 8z"/></svg>
-        <h3>Pflanzenhandel</h3><p>Stauden, Sträucher und Pflanzen für Beet und Topf, passend zu Standort und Boden.</p></article>
+    <div class="label">Leistungen</div>
+    <h2>Was Kündig Gärten macht</h2>
+    <div class="list">
+      <div class="item reveal"><span class="no">01</span><h3>Gartenpflege</h3><p>Regelmässiger Unterhalt von Rasen, Hecken und Beeten, damit der Garten das ganze Jahr gepflegt aussieht.</p></div>
+      <div class="item reveal"><span class="no">02</span><h3>Gartenbau</h3><p>Neu anlegen oder umgestalten: Beete, Rasenflächen, Wege und Sitzplätze.</p></div>
+      <div class="item reveal"><span class="no">03</span><h3>Material liefern</h3><p>Erde, Mulch, Kies und weiteres Material, auf Wunsch gleich mitgeliefert.</p></div>
+      <div class="item reveal"><span class="no">04</span><h3>Pflanzenhandel</h3><p>Pflanzen für Beet und Topf, passend zu Standort und Boden.</p></div>
     </div>
   </div>
 </section>
 
-<section id="anfrage">
-  <div class="wrap builder">
-    <div class="panel reveal">
-      <h3>Was darf es sein?</h3>
-      <p>Wählen Sie aus, schreiben Sie kurz, wo Ihr Garten liegt. Die Nachricht öffnet sich in WhatsApp, Sie müssen nur noch senden.</p>
+<section class="tint" id="anfrage">
+  <div class="wrap two">
+    <div class="form reveal">
+      <h3>Anfrage per WhatsApp</h3>
+      <p>Auswählen, kurz beschreiben, senden. WhatsApp öffnet sich mit fertiger Nachricht an Jens Kündig.</p>
       <div class="chips" id="chips">
         <label class="chip"><input type="checkbox" value="Gartenpflege"><span>Gartenpflege</span></label>
         <label class="chip"><input type="checkbox" value="Gartenbau"><span>Gartenbau</span></label>
         <label class="chip"><input type="checkbox" value="Materiallieferung"><span>Material liefern</span></label>
         <label class="chip"><input type="checkbox" value="Pflanzen"><span>Pflanzen</span></label>
       </div>
-      <div class="field"><label for="name">Name</label><input id="name" placeholder="Ihr Name" autocomplete="name"></div>
-      <div class="field"><label for="ort">Ort</label><input id="ort" placeholder="z. B. Wetzikon" autocomplete="address-level2"></div>
-      <div class="field"><label for="msg">Kurz beschreiben</label><textarea id="msg" rows="3" placeholder="z. B. Rasen und Hecke, ca. 400 m²"></textarea></div>
-      <a class="btn" id="send" href="#">Per WhatsApp senden</a>
-      <p class="note">Oder rufen Sie an: <a href="tel:+41763930242" style="color:#fff">076 393 02 42</a></p>
+      <div class="f"><label for="name">Name</label><input id="name" autocomplete="name"></div>
+      <div class="f"><label for="ort">Ort</label><input id="ort" placeholder="z. B. Wetzikon" autocomplete="address-level2"></div>
+      <div class="f"><label for="msg">Worum geht es?</label><textarea id="msg" rows="3" placeholder="z. B. Rasen und Hecke, ca. 400 m²"></textarea></div>
+      <a class="btn" id="send" href="#">Nachricht öffnen</a>
+      <p class="hint">Lieber telefonisch? <a href="tel:+41763930242">076 393 02 42</a></p>
     </div>
     <div class="reveal">
-      <div class="eyebrow">Ablauf</div>
-      <h2 style="margin-bottom:2rem">So läuft <i>es ab.</i></h2>
+      <div class="label">Ablauf</div>
+      <h2>In drei Schritten zum Garten</h2>
       <ol class="steps">
-        <li><div><h4>Sie melden sich</h4><p>Per Anruf, Mail oder WhatsApp. Ein paar Stichworte genügen.</p></div></li>
-        <li><div><h4>Besichtigung vor Ort</h4><p>Wir schauen uns den Garten gemeinsam an und besprechen Ihre Wünsche.</p></div></li>
-        <li><div><h4>Offerte und Umsetzung</h4><p>Sie erhalten eine klare Offerte. Danach wird der Garten umgesetzt oder regelmässig gepflegt.</p></div></li>
+        <li><h4>Sie melden sich</h4><p>Per Anruf, Mail oder WhatsApp. Ein paar Stichworte genügen.</p></li>
+        <li><h4>Besichtigung vor Ort</h4><p>Wir schauen den Garten gemeinsam an und besprechen Ihre Wünsche.</p></li>
+        <li><h4>Offerte und Umsetzung</h4><p>Sie erhalten eine Offerte. Danach wird gebaut oder regelmässig gepflegt.</p></li>
       </ol>
     </div>
   </div>
 </section>
 
-<section class="about" id="ueber">
-  <div class="wrap about-grid">
-    <div class="photo reveal"><span>Foto von Jens Kündig<br>oder seinem Garten folgt</span></div>
+<section id="ueber" class="about">
+  <div class="wrap two">
     <div class="reveal">
-      <div class="eyebrow">Über uns</div>
-      <h2>Ein kleiner Betrieb, <i>direkt erreichbar.</i></h2>
-      <p>Kündig Gärten ist eine Einzelfirma in Wetzikon und seit 2022 im Handelsregister eingetragen. Hinter dem Namen steht Jens Kündig. Sie sprechen immer mit derselben Person, von der ersten Anfrage bis zum fertigen Garten.</p>
-      <div class="badges"><span>Gartenpflege</span><span>Gartenbau</span><span>Materiallieferung</span><span>Pflanzenhandel</span></div>
+      <div class="label">Über uns</div>
+      <h2>Ein Betrieb, eine Ansprechperson</h2>
+      <p>Kündig Gärten ist eine Einzelfirma in Wetzikon. Der Betrieb besteht seit 2022, Inhaber ist Jens Kündig.</p>
     </div>
+    <dl class="facts reveal">
+      <div><dt>Inhaber</dt><dd>Jens Kündig</dd></div>
+      <div><dt>Standort</dt><dd>Grütstrasse 51, 8620 Wetzikon ZH</dd></div>
+      <div><dt>Rechtsform</dt><dd>Einzelfirma, seit 2022 im Handelsregister</dd></div>
+      <div><dt>Tätigkeit</dt><dd>Gartenpflege, Gartenbau, Material, Pflanzenhandel</dd></div>
+    </dl>
   </div>
 </section>
 
-<section id="kontakt">
+<section class="contact" id="kontakt">
   <div class="wrap">
-    <div class="sec-head reveal"><div><div class="eyebrow">Kontakt</div><h2>Ich freue mich <i>auf Ihre Anfrage.</i></h2></div></div>
-    <div class="contact-grid">
-      <div class="cbox reveal">
-        <a class="row" href="tel:+41763930242"><span class="ic"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span><small>Telefon</small><b>076 393 02 42</b></span></a>
-        <a class="row" href="mailto:info@kuendig-gaerten.ch"><span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>E-Mail</small><b>info@kuendig-gaerten.ch</b></span></a>
-        <div class="row"><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Adresse</small><b>Grütstrasse 51, 8620 Wetzikon</b></span></div>
-      </div>
-      <div class="mapcard reveal">
-        <svg class="grid" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#9bb09a" stroke-width="1"><path d="M0 60h400M0 140h400M0 220h400M80 0v300M190 0v300M300 0v300"/><path d="M-10 250C80 190 140 210 220 140S340 60 420 80" stroke-width="2.5"/></g></svg>
-        <div><h3>Kündig Gärten<br>Grütstrasse 51, Wetzikon</h3><p>Einsatz in Wetzikon und Umgebung.</p></div>
-        <a class="btn" target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Gr%C3%BCtstrasse%2051%2C%208620%20Wetzikon">Auf Karte öffnen</a>
-      </div>
+    <div class="label">Kontakt</div>
+    <h2>Ich freue mich auf Ihre Kontaktaufnahme.</h2>
+    <div class="big">
+      <a href="tel:+41763930242">076 393 02 42</a>
+      <a href="mailto:info@kuendig-gaerten.ch">info@kuendig-gaerten.ch</a>
+    </div>
+    <div class="addr">
+      <span>Jens Kündig · Grütstrasse 51 · 8620 Wetzikon</span>
+      <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/search?query=Gr%C3%BCtstrasse%2051%2C%208620%20Wetzikon">Auf Karte öffnen</a>
     </div>
   </div>
 </section>
@@ -295,38 +237,16 @@ footer{border-top:1px solid var(--line);padding:2rem 0 2.4rem;font-size:.85rem;c
 
 <footer>
   <div class="wrap foot">
-    <span>© Kündig Gärten · Jens Kündig · Grütstrasse 51 · 8620 Wetzikon</span>
+    <img src="logo.png" alt="Kündig Gärten">
     <span>Entwurf, nicht öffentlich</span>
   </div>
 </footer>
 
 <script>
-// Pflanze zeichnen
-(function(){
-  var svg=document.getElementById('plant'),NS='http://www.w3.org/2000/svg';
-  function el(n,a){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);return e}
-  var stem=el('path',{d:'M200 400 C196 320 206 250 198 170 C194 120 204 80 200 48',class:'stem'});
-  stem.style.setProperty('--l','380');svg.appendChild(stem);
-  var leaves=[[196,350,-1,70],[203,310,1,76],[198,270,-1,66],[204,232,1,70],[198,196,-1,58],[203,160,1,60],[199,124,-1,48],[202,92,1,46]];
-  leaves.forEach(function(l,i){
-    var x=l[0],y=l[1],s=l[2],L=l[3];
-    var d='M'+x+' '+y+' C'+(x+s*L*.5)+' '+(y-L*.55)+' '+(x+s*L)+' '+(y-L*.35)+' '+(x+s*L*1.05)+' '+(y-L*.75)+' C'+(x+s*L*.35)+' '+(y-L*.85)+' '+x+' '+(y-L*.45)+' '+x+' '+y+'Z';
-    var p=el('path',{d:d,class:'leaf'+(i%2?' alt':'')});
-    p.style.setProperty('--ox',x+'px');p.style.setProperty('--oy',y+'px');
-    p.style.setProperty('--r0',(s*-25)+'deg');p.style.setProperty('--d',(.5+i*.16)+'s');
-    svg.appendChild(p);
-  });
-  var top=el('path',{d:'M200 48 C186 34 188 14 200 6 C212 14 214 34 200 48Z',class:'leaf alt'});
-  top.style.setProperty('--ox','200px');top.style.setProperty('--oy','48px');top.style.setProperty('--r0','0deg');top.style.setProperty('--d','1.9s');
-  svg.appendChild(top);
-})();
-
-// Menü
 var b=document.getElementById('burger'),m=document.getElementById('menu');
 b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 m.addEventListener('click',function(e){if(e.target.tagName==='A')m.classList.remove('open')});
 
-// WhatsApp-Anfrage
 var send=document.getElementById('send');
 function build(){
   var sel=[].map.call(document.querySelectorAll('#chips input:checked'),function(i){return i.value});
@@ -340,9 +260,8 @@ function build(){
 document.querySelectorAll('#anfrage input,#anfrage textarea').forEach(function(i){i.addEventListener('input',build)});
 build();
 
-// Einblenden
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
-document.querySelectorAll('.reveal').forEach(function(r,i){r.style.transitionDelay=(i%4)*70+'ms';io.observe(r)});
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(function(r){io.observe(r)});
 </script>
 </body>
 </html>
