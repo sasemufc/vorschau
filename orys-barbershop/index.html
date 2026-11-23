@@ -6,27 +6,29 @@
 <title>Ory's Barbershop · Zürich · Ohne Voranmeldung</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0a0a0a">
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root{--bk:#0a0a0a;--bk2:#141414;--wh:#f2f0ec;--mute:#8d8a85;--red:#ff2d55;--line:rgba(242,240,236,.14);
-        --dis:"Anton",Impact,"Arial Narrow",sans-serif;--sans:"Space Grotesk",system-ui,sans-serif}
+        --dis:"Montserrat","Arial Black",sans-serif;--sans:"Space Grotesk",system-ui,sans-serif}
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;overflow-x:clip}
   body{font-family:var(--sans);background:var(--bk);color:var(--wh);-webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:inherit;text-decoration:none}
   img{display:block;width:100%;height:100%;object-fit:cover}
   .pad{padding-left:clamp(18px,4vw,60px);padding-right:clamp(18px,4vw,60px)}
-  .dis{font-family:var(--dis);font-weight:400;text-transform:uppercase;letter-spacing:.01em;line-height:.88}
-  .out{color:transparent;-webkit-text-stroke:2px var(--wh)}
+  .dis{font-family:var(--dis);font-weight:800;text-transform:uppercase;letter-spacing:.02em;line-height:.92}
+  .out{color:#7d7a75}
   .red{color:var(--red)}
 
   .note{background:var(--red);color:#fff;font-size:11.5px;text-align:center;padding:6px 12px;font-weight:500}
 
   header{position:fixed;top:28px;left:0;right:0;z-index:40;display:flex;justify-content:space-between;align-items:center;height:76px;transition:background .3s,top .3s}
   header.s{background:rgba(10,10,10,.9);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);top:0;border-bottom:1px solid var(--line)}
-  .logo{font-family:var(--dis);font-size:28px;letter-spacing:.04em;display:flex;align-items:center;gap:10px}
+  .logo{font-family:var(--dis);font-weight:800;font-size:18px;letter-spacing:.14em;display:flex;align-items:center;gap:12px}
+  .logo img{width:52px;height:52px;border-radius:50%;box-shadow:0 0 0 2px var(--wh)}
   .pole{width:12px;height:30px;border-radius:6px;background:repeating-linear-gradient(135deg,var(--red) 0 6px,#fff 6px 12px,#1d4ed8 12px 18px,#fff 18px 24px);background-size:100% 34px;animation:pole 1.2s linear infinite;border:2px solid #fff}
   @keyframes pole{to{background-position:0 34px}}
   nav{display:flex;gap:30px;font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
@@ -40,9 +42,9 @@
   .hero.in .bg{transform:scale(1)}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,10,.2),rgba(10,10,10,.1) 40%,rgba(10,10,10,.95))}
   .hero .c{position:absolute;left:0;right:0;bottom:56px;z-index:2}
-  .hero h1{font-size:clamp(96px,22vw,340px)}
+  .hero h1{font-size:clamp(70px,13vw,220px)}
   .hero h1 span{display:block}
-  .hero h1 .ln:nth-child(2){font-size:.62em;margin-top:.06em}
+  .hero h1 .ln:nth-child(2){font-size:.5em;margin-top:.08em;letter-spacing:.08em}
   .hero .sub{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:20px}
   .hero .sub p{font-size:clamp(17px,1.8vw,22px);max-width:460px;line-height:1.45;color:#d8d5cf}
   .live{display:inline-flex;align-items:center;gap:12px;background:var(--wh);color:var(--bk);padding:14px 22px;font-weight:700;font-size:15px;letter-spacing:.04em}
@@ -52,27 +54,33 @@
   .burst{position:absolute;right:clamp(18px,6vw,90px);top:22%;z-index:3;width:clamp(110px,12vw,160px);aspect-ratio:1;display:grid;place-items:center;transform:rotate(-12deg)}
   .burst svg{position:absolute;inset:0;animation:spin 18s linear infinite}
   @keyframes spin{to{transform:rotate(360deg)}}
-  .burst span{position:relative;font-family:var(--dis);font-size:clamp(22px,2.4vw,32px);text-align:center;line-height:.95;color:#fff}
+  .burst span{position:relative;font-family:var(--dis);font-weight:900;font-size:clamp(16px,1.7vw,22px);text-align:center;line-height:.95;color:#fff}
 
+
+  .seal{position:absolute;z-index:3;right:clamp(18px,6vw,100px);top:50%;transform:translateY(-62%);width:clamp(200px,24vw,340px);aspect-ratio:1}
+  .seal img{position:absolute;inset:15%;width:70%;height:70%;border-radius:50%;box-shadow:0 0 0 3px var(--wh),0 30px 60px -20px rgba(0,0,0,.8)}
+  .seal svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 26s linear infinite}
+  .seal text{font-family:var(--dis);font-weight:800;font-size:10.5px;letter-spacing:3.2px;fill:var(--wh)}
+  .hero .burst{right:auto;left:clamp(18px,5vw,70px);top:20%}
   /* TICKER */
   .tick{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0}
   .tick .t{display:inline-flex;gap:38px;animation:run 26s linear infinite}
-  .tick span{font-family:var(--dis);font-size:clamp(28px,3.4vw,46px);text-transform:uppercase}
-  .tick span:nth-child(3n+2){color:transparent;-webkit-text-stroke:1.5px var(--wh)}
+  .tick span{font-family:var(--dis);font-weight:800;font-size:clamp(24px,2.8vw,38px);text-transform:uppercase;letter-spacing:.04em}
+  .tick span:nth-child(3n+2){color:#6f6c67}
   .tick span:nth-child(3n){color:var(--red)}
   @keyframes run{to{transform:translateX(-50%)}}
 
   /* PREISE */
   .prices{padding-top:clamp(100px,12vw,170px);padding-bottom:clamp(100px,12vw,170px);display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,100px);align-items:start}
-  .prices h2{font-size:clamp(70px,10vw,170px);position:sticky;top:120px}
+  .prices h2{font-size:clamp(56px,7.4vw,124px);position:sticky;top:120px}
   .prices h2 small{display:block;font-family:var(--sans);font-size:14px;letter-spacing:.24em;color:var(--mute);margin-top:22px;font-weight:500}
   .plist{position:relative}
   .neu{position:absolute;right:0;top:-46px;background:var(--red);color:#fff;font-weight:700;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:7px 12px;transform:rotate(3deg)}
   .row{display:flex;align-items:baseline;gap:14px;padding:30px 0;border-bottom:1px solid var(--line);transition:padding .35s}
   .row:hover{padding-left:14px}
-  .row h3{font-family:var(--dis);font-weight:400;font-size:clamp(30px,3.6vw,52px);text-transform:uppercase;line-height:1;white-space:nowrap}
+  .row h3{font-family:var(--dis);font-weight:800;font-size:clamp(22px,2.6vw,38px);text-transform:uppercase;line-height:1.05;white-space:nowrap;letter-spacing:.02em}
   .row .dots{flex:1;border-bottom:2px dotted rgba(242,240,236,.3);transform:translateY(-8px);min-width:20px}
-  .row b{font-family:var(--dis);font-weight:400;font-size:clamp(34px,4vw,58px);line-height:1}
+  .row b{font-family:var(--dis);font-weight:900;font-size:clamp(30px,3.4vw,50px);line-height:1}
   .row b small{font-family:var(--sans);font-size:14px;font-weight:700;letter-spacing:.1em;margin-left:6px;color:var(--mute)}
   .row p{width:100%;color:var(--mute);font-size:14px;margin-top:-6px}
   .rowwrap{display:flex;flex-wrap:wrap}
@@ -80,19 +88,19 @@
 
   /* WALK-IN */
   .walk{background:var(--wh);color:var(--bk);padding-top:clamp(90px,11vw,150px);padding-bottom:clamp(90px,11vw,150px)}
-  .walk h2{font-size:clamp(56px,9vw,150px);margin-bottom:60px}
-  .walk h2 .out{-webkit-text-stroke:2px var(--bk)}
+  .walk h2{font-size:clamp(44px,7vw,116px);margin-bottom:60px}
+  .walk h2 .out{color:#a19d96}
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:3px solid var(--bk)}
   .step{padding:30px 30px 0 0}
   .step + .step{padding-left:30px;border-left:1px solid rgba(10,10,10,.15)}
-  .step i{font-style:normal;font-family:var(--dis);font-size:80px;line-height:1;color:var(--red);display:block;margin-bottom:24px}
-  .step h3{font-family:var(--dis);font-weight:400;font-size:32px;text-transform:uppercase;margin-bottom:10px}
+  .step i{font-style:normal;font-family:var(--dis);font-weight:900;font-size:72px;line-height:1;color:var(--red);display:block;margin-bottom:24px}
+  .step h3{font-family:var(--dis);font-weight:800;font-size:24px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
   .step p{color:#55524d;line-height:1.55}
 
   /* GALERIE */
   .gal{padding-top:clamp(100px,12vw,170px);padding-bottom:clamp(60px,8vw,100px)}
   .gal-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px}
-  .gal-head h2{font-size:clamp(56px,8vw,130px)}
+  .gal-head h2{font-size:clamp(44px,6.4vw,104px)}
   .gal-head a{font-weight:700;letter-spacing:.12em;font-size:13px;border-bottom:2px solid var(--red);padding-bottom:4px}
   .grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:280px 280px;gap:10px}
   .grid figure{overflow:hidden;background:var(--bk2);position:relative}
@@ -108,25 +116,25 @@
   .soc a:last-child{border-right:0}
   .soc a:hover{background:var(--bk2)}
   .soc small{display:block;font-size:12px;letter-spacing:.2em;color:var(--mute);margin-bottom:14px;text-transform:uppercase}
-  .soc b{font-family:var(--dis);font-weight:400;font-size:clamp(24px,2.4vw,34px);text-transform:uppercase}
+  .soc b{font-family:var(--dis);font-weight:800;font-size:clamp(18px,1.8vw,26px);text-transform:uppercase}
   .soc span{display:block;margin-top:12px;color:var(--red);font-weight:700;font-size:13px;letter-spacing:.1em}
 
   /* BESUCH */
   .visit{overflow:hidden;border-top:1px solid var(--line);padding-top:clamp(100px,12vw,160px);padding-bottom:40px}
   .vgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(40px,6vw,100px)}
-  .visit h2{font-size:clamp(60px,9vw,150px);margin-bottom:30px}
-  .tel{display:inline-block;font-family:var(--dis);font-size:clamp(40px,5vw,72px);border-bottom:4px solid var(--red);line-height:1.05}
+  .visit h2{font-size:clamp(48px,7vw,116px);margin-bottom:30px}
+  .tel{display:inline-block;font-family:var(--dis);font-weight:900;font-size:clamp(32px,4vw,58px);border-bottom:4px solid var(--red);line-height:1.05}
   .addr{margin-top:30px;color:#c9c6c0;line-height:1.7;font-size:17px}
   .hours{list-style:none}
   .hours li{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px;color:var(--mute)}
-  .hours li b{font-family:var(--dis);font-weight:400;font-size:26px;color:var(--wh)}
+  .hours li b{font-family:var(--dis);font-weight:800;font-size:20px;letter-spacing:.04em;color:var(--wh)}
   .hours li.off b{color:#555}
   .hours li.today{color:var(--wh)}
   .hours li.today span::after{content:"HEUTE";margin-left:10px;background:var(--red);color:#fff;font-size:10px;font-weight:700;letter-spacing:.14em;padding:3px 6px;vertical-align:middle}
-  .hint{margin-top:24px;font-family:var(--dis);font-size:26px;text-transform:uppercase}
+  .hint{margin-top:24px;font-family:var(--dis);font-weight:800;font-size:20px;letter-spacing:.06em;text-transform:uppercase}
   .map{margin-top:34px;height:240px;overflow:hidden;filter:grayscale(1) invert(.92) contrast(.95)}
   .map iframe{width:100%;height:100%;border:0}
-  .giant{font-size:clamp(80px,21vw,360px);margin-top:90px;color:transparent;-webkit-text-stroke:1px rgba(242,240,236,.22);white-space:nowrap}
+  .giant{font-size:clamp(60px,14vw,240px);margin-top:90px;color:#1e1e1e;white-space:nowrap}
   .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);font-size:12px;letter-spacing:.14em;color:#6a6762;text-transform:uppercase}
 
   .fab{display:none}
@@ -138,6 +146,8 @@
   @media (max-width:900px){
     nav,header .call{display:none}
     .burst{top:16%}
+    .seal{top:34%;width:200px;right:50%;transform:translate(50%,-50%)}
+    .hero .burst{top:118px;bottom:auto;left:14px;right:auto;width:88px}
     .prices,.vgrid{grid-template-columns:1fr}
     .prices h2{position:static}
     .row h3{white-space:normal;font-size:26px}
@@ -159,7 +169,7 @@
 <div class="note">Entwurf von Samyan Seyfi · nicht die offizielle Website von Ory's Barbershop · Bilder: Unsplash (Platzhalter)</div>
 
 <header class="pad" id="h">
-  <a class="logo" href="#"><span class="pole"></span>ORY'S</a>
+  <a class="logo" href="#"><img src="logo.png" alt="Ory's Barbershop Logo"><span>ORY'S<br><small style="font-size:10px;letter-spacing:.32em;opacity:.7">BARBERSHOP</small></span></a>
   <nav><a href="#preise">Preise</a><a href="#walkin">Walk-in</a><a href="#galerie">Galerie</a><a href="#besuch">Besuch</a></nav>
   <a class="call" href="tel:+41442710002">044 271 00 02</a>
 </header>
@@ -169,6 +179,10 @@
   <div class="burst" aria-hidden="true">
     <svg viewBox="0 0 100 100"><polygon fill="#ff2d55" points="50,0 57,18 75,7 70,27 92,25 80,42 100,50 80,58 92,75 70,73 75,93 57,82 50,100 43,82 25,93 30,73 8,75 20,58 0,50 20,42 8,25 30,27 25,7 43,18"/></svg>
     <span>Neue<br>Preise!</span>
+  </div>
+  <div class="seal" aria-hidden="true">
+    <svg viewBox="0 0 200 200"><defs><path id="cp" d="M100,100 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs><text><textPath href="#cp">OHNE VORANMELDUNG ✂ KREIS 5 ✂ ZÜRICH ✂ HAIR &amp; BEARD ✂ </textPath></text></svg>
+    <img src="logo.png" alt="">
   </div>
   <div class="c pad">
     <h1 class="dis"><span class="ln"><span>Ory's</span></span><span class="ln"><span class="out">Barbershop</span></span></h1>
@@ -248,7 +262,7 @@
       <p class="hint up">Ohne Voranmeldung <span class="red">✂</span></p><p class="up" style="color:var(--mute);margin-top:8px">We speak English.</p>
     </div>
   </div>
-  <div class="giant dis" aria-hidden="true">Ory's Zürich</div>
+  <div style="display:flex;align-items:center;gap:clamp(16px,3vw,40px);margin-top:90px;overflow:hidden"><img src="logo.png" alt="" style="width:clamp(80px,12vw,180px);height:auto;border-radius:50%;box-shadow:0 0 0 2px var(--wh);flex:none"><div class="giant dis" aria-hidden="true" style="margin-top:0">Ory's Zürich</div></div>
   <div class="foot"><span>© Ory's Barbershop · Zürich</span><span>Impressum · Datenschutz</span></div>
 </section>
 
